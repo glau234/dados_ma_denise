@@ -36,7 +36,7 @@ def fig_to_b64(fig):
 fig1, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.5, 2.6))
 # Donut Renovação
 ax1.pie([data['q2']['e2_new'], data['q2']['overlap']],
-        labels=['Novos\n(89,1%)', 'Recorrentes\n(10,9%)'],
+        labels=['Novos\n(89,6%)', 'Recorrentes\n(10,4%)'],
         colors=['#10b981', '#f59e0b'], autopct='%1.1f%%', startangle=140,
         textprops={'fontsize': 7.5}, wedgeprops={'edgecolor': 'white', 'linewidth': 1.2})
 ax1.set_title('Renovação no Evento 2 (N=386)', fontsize=8.5, fontweight='bold')
@@ -258,11 +258,11 @@ html_pb = f"""<!DOCTYPE html>
   <div class="kpi-strip">
     <div class="kpi-box" style="margin-right: 4px;">
       <div class="kpi-lbl">Comunidade M&A Única</div>
-      <div class="kpi-val" style="color: #2563eb;">1.086 Pessoas</div>
+      <div class="kpi-val" style="color: #2563eb;">1.088 Pessoas</div>
     </div>
     <div class="kpi-box" style="margin-right: 4px;">
       <div class="kpi-lbl">Taxa de Renovação E2</div>
-      <div class="kpi-val" style="color: #10b981;">89,1% Novos</div>
+      <div class="kpi-val" style="color: #10b981;">89,6% Novos</div>
     </div>
     <div class="kpi-box" style="margin-right: 4px;">
       <div class="kpi-lbl">Presença Feminina</div>
@@ -277,12 +277,12 @@ html_pb = f"""<!DOCTYPE html>
   <h2>1. Contexto e Mensagens-Chave em 1 Minuto</h2>
   <div class="callout">
     <strong>Síntese Estratégica:</strong>
-    A rede brasileira de políticas públicas informadas por evidências e M&A não constitui uma corporação fechada, mas um campo em franca expansão. O segundo evento nacional de 2024 atraiu <strong>89,1% de novos profissionais</strong>, e o survey setorial alcançou <strong>73,5% de profissionais externos</strong> aos eventos. Contudo, há gargalos críticos: forte polarização entre o meio acadêmico e a gestão, exclusão de estados fora de Brasília caso os eventos sejam exclusivamente presenciais, sub-representação racial nas posições de doutorado (>73% brancos) e um grave <em>abismo de comunicação pública</em> (apenas 33% comunicam com o cidadão).
+    A rede brasileira de políticas públicas informadas por evidências e M&A não constitui uma corporação fechada, mas um campo em franca expansão. O segundo evento nacional de 2024 atraiu <strong>89,6% de novos profissionais</strong>, e o survey setorial alcançou <strong>73,5% de profissionais externos</strong> aos eventos. Contudo, há gargalos críticos: forte polarização entre o meio acadêmico e a gestão, exclusão de estados fora de Brasília caso os eventos sejam exclusivamente presenciais, sub-representação racial nas posições de doutorado (>73% brancos) e um grave <em>abismo de comunicação pública</em> (apenas 33% comunicam com o cidadão).
   </div>
 
   <h2>2. Dinâmica de Participação: Renovação vs. Recorrência (P1 e P2)</h2>
   <p>
-    O cruzamento nominativo e por CPF comprovou que o survey funcionou como um canal aberto de ausculta e não apenas como lista de presença dos eventos: dos 226 respondentes identificados, <strong>73,5% (166 pessoas) não participaram de nenhum dos eventos</strong>, e apenas 26,5% estiveram presentes. Além disso, entre os dois eventos nacionais (Evento 1 com 742 inscritos e Evento 2 com 386 inscritos), a sobreposição foi de apenas <strong>42 indivíduos (3,87% da comunidade total)</strong>, demonstrando que o recorte prático do segundo encontro atraiu um contingente técnico inteiramente novo de avaliadores.
+    O cruzamento nominativo e por CPF comprovou que o survey funcionou como um canal aberto de ausculta e não apenas como lista de presença dos eventos: dos 226 respondentes identificados, <strong>73,5% (166 pessoas) não participaram de nenhum dos eventos</strong>, e apenas 26,5% estiveram presentes. Além disso, entre os dois eventos nacionais (Evento 1 com 742 inscritos e Evento 2 com 386 inscritos), a sobreposição foi de apenas <strong>40 indivíduos (3,68% da comunidade total)</strong>, demonstrando que o recorte prático do segundo encontro atraiu um contingente técnico inteiramente novo de avaliadores.
   </p>
 
   <div class="chart-box">

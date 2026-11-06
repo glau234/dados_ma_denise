@@ -65,22 +65,22 @@
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Inscrições Eventos</div>
         <div class="text-2xl font-bold text-slate-900 mt-1">1.128</div>
-        <div class="text-xs text-blue-600 mt-0.5 font-medium">1.086 indivíduos únicos</div>
+        <div class="text-xs text-blue-600 mt-0.5 font-medium">1.088 indivíduos únicos</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Respondentes Survey</div>
         <div class="text-2xl font-bold text-blue-700 mt-1">521</div>
-        <div class="text-xs text-slate-500 mt-0.5">245 com prática profunda</div>
+        <div class="text-xs text-slate-500 mt-0.5">245 completos (218 únicos id.)</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Taxa de Renovação</div>
-        <div class="text-2xl font-bold text-emerald-600 mt-1">89,1%</div>
-        <div class="text-xs text-emerald-700 mt-0.5 font-medium">Novos no 2º evento</div>
+        <div class="text-2xl font-bold text-emerald-600 mt-1">89,6%</div>
+        <div class="text-xs text-emerald-700 mt-0.5 font-medium">346 novos no 2º evento</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recorrência Geral</div>
-        <div class="text-2xl font-bold text-amber-600 mt-1">3,87%</div>
-        <div class="text-xs text-amber-700 mt-0.5">42 pessoas em ambos</div>
+        <div class="text-2xl font-bold text-amber-600 mt-1">3,68%</div>
+        <div class="text-xs text-amber-700 mt-0.5">Exatos 40 em ambos (CPF)</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Liderança Feminina</div>
@@ -136,14 +136,14 @@
             <span class="text-xs font-bold uppercase text-blue-600 tracking-wider">Pergunta 1</span>
             <h3 class="font-bold text-slate-800">Os respondentes do survey são os mesmos dos eventos?</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              <strong>Não.</strong> O survey alcançou uma comunidade substancialmente externa aos eventos. Dos 226 respondentes identificados, <strong>73,5% (166 pessoas)</strong> não participaram de nenhum dos eventos, enquanto <strong>26,5% (60 pessoas)</strong> estiveram em pelo menos um evento. Além disso, 295 participantes responderam de forma estritamente anônima.
+              <strong>Não.</strong> O survey alcançou uma comunidade substancialmente externa aos eventos. Das 226 respostas identificadas (<strong>218 indivíduos únicos</strong> após desduplicação de 8 envios duplos), <strong>73,5% (166 respostas / 161 únicos = 73,85%)</strong> não participaram de nenhum evento, enquanto <strong>26,5% (60 respostas / 57 únicos = 26,15%)</strong> estiveram em pelo menos um evento. Dos 295 registros sem identificação, 276 foram encerrados nas perguntas-filtro iniciais e apenas 19 responderam de forma anônima até o fim.
             </p>
           </div>
           <div class="border-l-4 border-emerald-500 pl-4 space-y-1">
             <span class="text-xs font-bold uppercase text-emerald-600 tracking-wider">Pergunta 2</span>
             <h3 class="font-bold text-slate-800">Recorrência ou Renovação de profissionais?</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              <strong>Alta renovação e atração de novos profissionais.</strong> No segundo evento, <strong>89,1% dos participantes eram estreantes</strong> (344 de 386). A taxa de sobreposição direta entre ambos os eventos foi de apenas <strong>3,87%</strong> do universo total de 1.086 indivíduos únicos (42 pessoas).
+              <strong>Alta renovação e atração de novos profissionais.</strong> No segundo evento, <strong>89,64% dos participantes eram estreantes</strong> (346 de 386). A taxa de sobreposição exata (validada por CPF e livre de homônimos) entre ambos os eventos foi de apenas <strong>3,68%</strong> do universo total de 1.088 indivíduos únicos (<strong>40 pessoas</strong>).
             </p>
           </div>
           <div class="border-l-4 border-purple-500 pl-4 space-y-1">
@@ -278,7 +278,7 @@
             <p class="text-sm text-slate-500">Análise longitudinal entre o Evento 1 (Políticas por Evidências) e o Evento 2 (Práticas em Avaliação)</p>
           </div>
           <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-semibold">
-            1.086 Indivíduos Únicos Analisados
+            1.088 Indivíduos Únicos Analisados
           </span>
         </div>
 
@@ -287,24 +287,24 @@
             <div class="w-full max-w-xs h-64 relative">
               <canvas id="chartQ2"></canvas>
             </div>
-            <p class="text-xs text-slate-500 text-center mt-3">Composição do Evento 2: Renovação massiva</p>
+            <p class="text-xs text-slate-500 text-center mt-3">Composição do Evento 2: Renovação massiva (89,64%)</p>
           </div>
 
           <div class="lg:col-span-7">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
                 <span class="text-xs font-bold uppercase text-emerald-700 tracking-wider">Taxa de Renovação</span>
-                <div class="text-3xl font-extrabold text-emerald-900 mt-1">89,12%</div>
+                <div class="text-3xl font-extrabold text-emerald-900 mt-1">89,64%</div>
                 <p class="text-xs text-emerald-700 mt-1">
-                  Dos 386 inscritos no Evento 2, <strong>344 eram participantes inéditos</strong> que nunca haviam estado no Evento 1.
+                  Dos 386 inscritos no Evento 2, <strong>346 eram participantes inéditos</strong> que nunca haviam estado no Evento 1.
                 </p>
               </div>
 
               <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
                 <span class="text-xs font-bold uppercase text-amber-700 tracking-wider">Taxa de Recorrência Global</span>
-                <div class="text-3xl font-extrabold text-amber-900 mt-1">3,87%</div>
+                <div class="text-3xl font-extrabold text-amber-900 mt-1">3,68%</div>
                 <p class="text-xs text-amber-700 mt-1">
-                  Apenas <strong>42 pessoas</strong> participaram de ambos os eventos, demonstrando públicos-alvo especializados distintos.
+                  Exatamente <strong>40 pessoas</strong> (validadas por CPF) participaram de ambos os eventos, demonstrando públicos especializados distintos.
                 </p>
               </div>
             </div>
@@ -331,23 +331,23 @@
                   </tr>
                   <tr>
                     <td class="p-2.5 font-medium">Total de Indivíduos Únicos na Rede</td>
-                    <td class="p-2.5 text-center font-bold text-blue-600">1.086</td>
-                    <td class="p-2.5 text-center">Base Consolidada</td>
+                    <td class="p-2.5 text-center font-bold text-blue-600">1.088</td>
+                    <td class="p-2.5 text-center">Base Consolidada (742 + 386 - 40)</td>
                   </tr>
                   <tr class="bg-amber-50/50">
-                    <td class="p-2.5 font-semibold text-amber-900">Sobreposição de Participantes (Ambos os Eventos)</td>
-                    <td class="p-2.5 text-center font-bold text-amber-900">42</td>
-                    <td class="p-2.5 text-center font-bold text-amber-900">3,87% dos indivíduos únicos</td>
+                    <td class="p-2.5 font-semibold text-amber-900">Sobreposição Exata de Participantes (Ambos os Eventos - CPF)</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">40</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">3,68% dos indivíduos únicos</td>
                   </tr>
                   <tr class="bg-emerald-50/50">
                     <td class="p-2.5 font-semibold text-emerald-900">Novos Profissionais Atraídos no Evento 2</td>
-                    <td class="p-2.5 text-center font-bold text-emerald-900">344</td>
-                    <td class="p-2.5 text-center font-bold text-emerald-900">89,12% do Evento 2</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">346</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">89,64% do Evento 2</td>
                   </tr>
                   <tr>
                     <td class="p-2.5 font-medium">Taxa de Retenção do Evento 1 no Evento 2</td>
-                    <td class="p-2.5 text-center font-bold">42</td>
-                    <td class="p-2.5 text-center text-slate-600">5,66% do Evento 1</td>
+                    <td class="p-2.5 text-center font-bold">40</td>
+                    <td class="p-2.5 text-center text-slate-600">5,39% do Evento 1</td>
                   </tr>
                 </tbody>
               </table>
@@ -459,7 +459,7 @@
                   <tr><th class="p-2">UF</th><th class="p-2 text-center">Inscrições</th><th class="p-2 text-center">% Total</th></tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
-                  <tr><td class='p-2 font-semibold text-slate-900'>DF</td><td class='p-2 text-center font-bold text-blue-600'>512</td><td class='p-2 text-center text-slate-600'>45.4%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>SP</td><td class='p-2 text-center font-bold text-blue-600'>124</td><td class='p-2 text-center text-slate-600'>11.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>RJ</td><td class='p-2 text-center font-bold text-blue-600'>90</td><td class='p-2 text-center text-slate-600'>8.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>BA</td><td class='p-2 text-center font-bold text-blue-600'>43</td><td class='p-2 text-center text-slate-600'>3.8%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>MG</td><td class='p-2 text-center font-bold text-blue-600'>40</td><td class='p-2 text-center text-slate-600'>3.5%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>PR</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>GO</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>CE</td><td class='p-2 text-center font-bold text-blue-600'>25</td><td class='p-2 text-center text-slate-600'>2.2%</td></tr>
+                  <tr><td class='p-2 font-semibold text-slate-900'>DF</td><td class='p-2 text-center font-bold text-blue-600'>513</td><td class='p-2 text-center text-slate-600'>45.5%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>SP</td><td class='p-2 text-center font-bold text-blue-600'>124</td><td class='p-2 text-center text-slate-600'>11.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>RJ</td><td class='p-2 text-center font-bold text-blue-600'>90</td><td class='p-2 text-center text-slate-600'>8.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>BA</td><td class='p-2 text-center font-bold text-blue-600'>43</td><td class='p-2 text-center text-slate-600'>3.8%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>MG</td><td class='p-2 text-center font-bold text-blue-600'>40</td><td class='p-2 text-center text-slate-600'>3.5%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>PR</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>GO</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>CE</td><td class='p-2 text-center font-bold text-blue-600'>25</td><td class='p-2 text-center text-slate-600'>2.2%</td></tr>
                 </tbody>
               </table>
             </div>
@@ -757,7 +757,7 @@
     }
 
     // Dados embutidos
-    const rawData = {"q1": {"total_survey": 521, "anon": 295, "identified": 226, "e1_match": 47, "e2_match": 17, "both_match": 4, "any_match": 60, "external": 166, "pct_external_id": 73.45, "pct_any_id": 26.55, "pct_any_total": 11.52}, "q2": {"e1_total": 742, "e2_total": 386, "unique_total": 1086, "overlap": 42, "e2_new": 344, "renewal_rate": 89.12, "recurrence_rate_e2": 10.88, "recurrence_rate_e1": 5.66, "recurrence_rate_total": 3.87}, "q3": {"n": 243, "inertia_dim1": 15.07, "inertia_dim2": 11.52, "inertia_cum": 26.59, "chi2_tit_func": {"chi2": 70.06, "p": 3.1218e-10, "dof": 12}, "chi2_tmp_tit": {"chi2": 46.02, "p": 0.0001, "dof": 16}, "chi2_tmp_func": {"chi2": 17.86, "p": 0.1201, "dof": 12}, "points": [{"variable": "faixa_tempo", "category": "1. At\u00e9 2 anos", "dim1": 1.1213, "dim2": -0.5354}, {"variable": "faixa_tempo", "category": "2. De 3 a 5 anos", "dim1": 0.3779, "dim2": -0.2265}, {"variable": "faixa_tempo", "category": "3. De 6 a 10 anos", "dim1": 0.1026, "dim2": 0.4613}, {"variable": "faixa_tempo", "category": "4. De 11 a 20 anos", "dim1": -0.7256, "dim2": 0.2241}, {"variable": "faixa_tempo", "category": "5. Mais de 20 anos", "dim1": -0.8482, "dim2": -1.1549}, {"variable": "titulacao_clean", "category": "Doutorado", "dim1": -0.4911, "dim2": 0.4073}, {"variable": "titulacao_clean", "category": "Especializa\u00e7\u00e3o", "dim1": 1.1132, "dim2": -1.3283}, {"variable": "titulacao_clean", "category": "Gradua\u00e7\u00e3o/M\u00e9dio", "dim1": 0.7737, "dim2": -1.2437}, {"variable": "titulacao_clean", "category": "Mestrado", "dim1": 0.6926, "dim2": 0.5149}, {"variable": "titulacao_clean", "category": "P\u00f3s-doutorado", "dim1": -1.2565, "dim2": -0.6}, {"variable": "funcao_clean", "category": "Como gerente.", "dim1": 0.4802, "dim2": 2.7542}, {"variable": "funcao_clean", "category": "Como pesquisador(a).", "dim1": -0.6356, "dim2": -0.1593}, {"variable": "funcao_clean", "category": "Como pr\u00e1tico(a).", "dim1": 0.6062, "dim2": 0.2806}, {"variable": "funcao_clean", "category": "Na gest\u00e3o.", "dim1": 1.0408, "dim2": -0.5037}]}, "q4": {"total_events": 1128, "uf_top": {"DF": 512, "SP": 124, "RJ": 90, "BA": 43, "MG": 40, "PR": 30, "GO": 30, "CE": 25, "RS": 25, "PA": 21, "NA": 20, "SC": 18}, "regioes": {"Centro-Oeste": 559, "Sudeste": 269, "Nordeste": 138, "Sul": 73, "Norte": 65, "Outro/Exterior": 24}, "esferas": {"P\u00fablico Federal": 487, "P\u00fablico Estadual": 220, "Outros": 207, "P\u00fablico Municipal": 95, "Privado": 70, "Aut\u00f4nomo": 45, "N\u00e3o informado": 4}, "saude": {"Nao": 588, "Sim": 536, "N\u00e3o informado": 4}, "esfera_x_saude": {"Aut\u00f4nomo": {"Nao": 19, "N\u00e3o informado": 0, "Sim": 26}, "N\u00e3o informado": {"Nao": 0, "N\u00e3o informado": 4, "Sim": 0}, "Outros": {"Nao": 134, "N\u00e3o informado": 0, "Sim": 73}, "Privado": {"Nao": 30, "N\u00e3o informado": 0, "Sim": 40}, "P\u00fablico Estadual": {"Nao": 97, "N\u00e3o informado": 0, "Sim": 123}, "P\u00fablico Federal": {"Nao": 277, "N\u00e3o informado": 0, "Sim": 210}, "P\u00fablico Municipal": {"Nao": 31, "N\u00e3o informado": 0, "Sim": 64}}, "survey_setor": {"Servi\u00e7o p\u00fablico federal": 132, "Servi\u00e7o p\u00fablico estadual": 42, "Terceiro setor": 20, "Setor privado": 18, "Sou aut\u00f4nomo(a)": 17, "Servi\u00e7o p\u00fablico municipal": 16}, "survey_tematicas": {"Sa\u00fade": 134, "Educa\u00e7\u00e3o": 115, "Assist\u00eancia social": 60, "Meio ambiente": 51, "Cultura": 25, "Seguran\u00e7a": 22, "Habita\u00e7\u00e3o": 19, "Esporte": 14}}, "q5": {"counts": {"2": 122, "1": 91, "0": 32}, "means": {"0": {"ativid_principal": 0.5625, "proj_ativo": 0.875, "proj_internac": 0.3125, "tam_equipe": 8.6875, "met_estatistica": 0.625, "met_qualitativa": 0.5625, "met_indicadores": 0.71875, "met_sintese": 0.6875, "met_ats": 1.0, "met_participativa": 0.4375, "met_questionarios": 0.625, "diss_decisores": 0.78125, "diss_geral": 0.28125, "fez_capacitacao": 0.75}, "1": {"ativid_principal": 0.26373626373626374, "proj_ativo": 0.5054945054945055, "proj_internac": 0.07692307692307693, "tam_equipe": 4.373626373626373, "met_estatistica": 0.1978021978021978, "met_qualitativa": 0.38461538461538464, "met_indicadores": 0.38461538461538464, "met_sintese": 0.14285714285714285, "met_ats": 0.02197802197802198, "met_participativa": 0.16483516483516483, "met_questionarios": 0.2087912087912088, "diss_decisores": 0.4945054945054945, "diss_geral": 0.1978021978021978, "fez_capacitacao": 0.5604395604395604}, "2": {"ativid_principal": 0.7540983606557377, "proj_ativo": 0.9426229508196722, "proj_internac": 0.3442622950819672, "tam_equipe": 5.655737704918033, "met_estatistica": 0.639344262295082, "met_qualitativa": 0.6557377049180327, "met_indicadores": 0.7868852459016393, "met_sintese": 0.38524590163934425, "met_ats": 0.0, "met_participativa": 0.5409836065573771, "met_questionarios": 0.7213114754098361, "diss_decisores": 0.9016393442622951, "diss_geral": 0.4426229508196721, "fez_capacitacao": 0.6639344262295082}}, "names": {"0": "Cluster 1: Especialistas em ATS e S\u00edntese de Evid\u00eancias em Grandes Equipes", "1": "Cluster 2: Avaliadores Ocasionais / Pr\u00e1tica Perif\u00e9rica", "2": "Cluster 3: N\u00facleo Multimetodol\u00f3gico de Alta Intensidade Operacional"}}, "insights": {"sexo_e1": {"Feminino": 60.2, "Masculino": 39.8}, "genero_survey": {"Mulher cis": 62.9, "Homem cis": 35.1, "Outros/N\u00e3o declarado": 2.0}, "raca_survey": {"Branca": 66.5, "Parda": 24.9, "Preta": 5.7, "Prefiro n\u00e3o informar": 1.6, "Amarela": 1.2}, "diss_decisores_pct": 73.5, "diss_geral_pct": 33.1, "modalidade_e1": {"Online": 57.3, "Presencial": 25.8, "Outro": 16.9}}};
+    const rawData = {"q1": {"total_survey": 521, "anon": 295, "anon_eligible": 19, "filtered_out": 276, "identified": 226, "e1_match": 47, "e2_match": 17, "both_match": 4, "any_match": 60, "external": 166, "pct_external_id": 73.45, "pct_any_id": 26.55, "pct_any_total": 11.52, "identified_unique": 218, "e1_match_unique": 44, "e2_match_unique": 16, "both_match_unique": 3, "any_match_unique": 57, "external_unique": 161, "pct_external_unique": 73.85, "pct_any_unique": 26.15}, "q2": {"e1_total": 742, "e2_total": 386, "unique_total": 1088, "overlap": 40, "e2_new": 346, "renewal_rate": 89.64, "recurrence_rate_e2": 10.36, "recurrence_rate_e1": 5.39, "recurrence_rate_total": 3.68}, "q3": {"n": 243, "inertia_dim1": 15.07, "inertia_dim2": 11.52, "inertia_cum": 26.59, "chi2_tit_func": {"chi2": 70.06, "p": 3.1218e-10, "dof": 12}, "chi2_tmp_tit": {"chi2": 46.02, "p": 0.0001, "dof": 16}, "chi2_tmp_func": {"chi2": 17.86, "p": 0.1201, "dof": 12}, "points": [{"variable": "faixa_tempo", "category": "1. At\u00e9 2 anos", "dim1": 1.1213, "dim2": -0.5354}, {"variable": "faixa_tempo", "category": "2. De 3 a 5 anos", "dim1": 0.3779, "dim2": -0.2265}, {"variable": "faixa_tempo", "category": "3. De 6 a 10 anos", "dim1": 0.1026, "dim2": 0.4613}, {"variable": "faixa_tempo", "category": "4. De 11 a 20 anos", "dim1": -0.7256, "dim2": 0.2241}, {"variable": "faixa_tempo", "category": "5. Mais de 20 anos", "dim1": -0.8482, "dim2": -1.1549}, {"variable": "titulacao_clean", "category": "Doutorado", "dim1": -0.4911, "dim2": 0.4073}, {"variable": "titulacao_clean", "category": "Especializa\u00e7\u00e3o", "dim1": 1.1132, "dim2": -1.3283}, {"variable": "titulacao_clean", "category": "Gradua\u00e7\u00e3o/M\u00e9dio", "dim1": 0.7737, "dim2": -1.2437}, {"variable": "titulacao_clean", "category": "Mestrado", "dim1": 0.6926, "dim2": 0.5149}, {"variable": "titulacao_clean", "category": "P\u00f3s-doutorado", "dim1": -1.2565, "dim2": -0.6}, {"variable": "funcao_clean", "category": "Como gerente.", "dim1": 0.4802, "dim2": 2.7542}, {"variable": "funcao_clean", "category": "Como pesquisador(a).", "dim1": -0.6356, "dim2": -0.1593}, {"variable": "funcao_clean", "category": "Como pr\u00e1tico(a).", "dim1": 0.6062, "dim2": 0.2806}, {"variable": "funcao_clean", "category": "Na gest\u00e3o.", "dim1": 1.0408, "dim2": -0.5037}]}, "q4": {"total_events": 1128, "uf_top": {"DF": 513, "SP": 124, "RJ": 90, "BA": 43, "MG": 40, "PR": 30, "GO": 30, "CE": 25, "RS": 25, "PA": 21, "N\u00e3o Informado": 21, "SC": 18}, "regioes": {"Centro-Oeste": 560, "Sudeste": 269, "Nordeste": 138, "Sul": 73, "Norte": 65, "Outro/Exterior": 23}, "esferas": {"P\u00fablico Federal": 487, "P\u00fablico Estadual": 220, "Outros": 207, "P\u00fablico Municipal": 95, "Privado": 70, "Aut\u00f4nomo": 45, "N\u00e3o informado": 4}, "saude": {"Nao": 588, "Sim": 536, "N\u00e3o informado": 4}, "esfera_x_saude": {"Aut\u00f4nomo": {"Nao": 19, "N\u00e3o informado": 0, "Sim": 26}, "N\u00e3o informado": {"Nao": 0, "N\u00e3o informado": 4, "Sim": 0}, "Outros": {"Nao": 134, "N\u00e3o informado": 0, "Sim": 73}, "Privado": {"Nao": 30, "N\u00e3o informado": 0, "Sim": 40}, "P\u00fablico Estadual": {"Nao": 97, "N\u00e3o informado": 0, "Sim": 123}, "P\u00fablico Federal": {"Nao": 277, "N\u00e3o informado": 0, "Sim": 210}, "P\u00fablico Municipal": {"Nao": 31, "N\u00e3o informado": 0, "Sim": 64}}, "survey_setor": {"Servi\u00e7o p\u00fablico federal": 132, "Servi\u00e7o p\u00fablico estadual": 42, "Terceiro setor": 20, "Setor privado": 18, "Sou aut\u00f4nomo(a)": 17, "Servi\u00e7o p\u00fablico municipal": 16}, "survey_tematicas": {"Sa\u00fade": 134, "Educa\u00e7\u00e3o": 115, "Assist\u00eancia social": 60, "Meio ambiente": 51, "Cultura": 25, "Seguran\u00e7a": 22, "Habita\u00e7\u00e3o": 19, "Esporte": 14}}, "q5": {"counts": {"2": 122, "1": 91, "0": 32}, "means": {"0": {"ativid_principal": 0.5625, "proj_ativo": 0.875, "proj_internac": 0.3125, "tam_equipe": 8.6875, "met_estatistica": 0.625, "met_qualitativa": 0.5625, "met_indicadores": 0.71875, "met_sintese": 0.6875, "met_ats": 1.0, "met_participativa": 0.4375, "met_questionarios": 0.625, "diss_decisores": 0.78125, "diss_geral": 0.28125, "fez_capacitacao": 0.75}, "1": {"ativid_principal": 0.26373626373626374, "proj_ativo": 0.5054945054945055, "proj_internac": 0.07692307692307693, "tam_equipe": 4.373626373626373, "met_estatistica": 0.1978021978021978, "met_qualitativa": 0.38461538461538464, "met_indicadores": 0.38461538461538464, "met_sintese": 0.14285714285714285, "met_ats": 0.02197802197802198, "met_participativa": 0.16483516483516483, "met_questionarios": 0.2087912087912088, "diss_decisores": 0.4945054945054945, "diss_geral": 0.1978021978021978, "fez_capacitacao": 0.5604395604395604}, "2": {"ativid_principal": 0.7540983606557377, "proj_ativo": 0.9426229508196722, "proj_internac": 0.3442622950819672, "tam_equipe": 5.655737704918033, "met_estatistica": 0.639344262295082, "met_qualitativa": 0.6557377049180327, "met_indicadores": 0.7868852459016393, "met_sintese": 0.38524590163934425, "met_ats": 0.0, "met_participativa": 0.5409836065573771, "met_questionarios": 0.7213114754098361, "diss_decisores": 0.9016393442622951, "diss_geral": 0.4426229508196721, "fez_capacitacao": 0.6639344262295082}}, "names": {"0": "Cluster 1: Especialistas em ATS e S\u00edntese de Evid\u00eancias em Grandes Equipes", "1": "Cluster 2: Avaliadores Ocasionais / Pr\u00e1tica Perif\u00e9rica", "2": "Cluster 3: N\u00facleo Multimetodol\u00f3gico de Alta Intensidade Operacional"}}, "insights": {"sexo_e1": {"Feminino": 60.2, "Masculino": 39.8}, "genero_survey": {"Mulher cis": 62.9, "Homem cis": 35.1, "Outros/N\u00e3o declarado": 2.0}, "raca_survey": {"Branca": 66.5, "Parda": 24.9, "Preta": 5.7, "Prefiro n\u00e3o informar": 1.6, "Amarela": 1.2}, "diss_decisores_pct": 73.5, "diss_geral_pct": 33.1, "modalidade_e1": {"Online": 57.3, "Presencial": 25.8, "Outro": 16.9}}};
 
     // Chart Q1
     new Chart(document.getElementById('chartQ1'), {
@@ -781,7 +781,7 @@
     new Chart(document.getElementById('chartQ2'), {
       type: 'doughnut',
       data: {
-        labels: ['Novos Profissionais (89,1%)', 'Participantes Recorrentes (10,9%)'],
+        labels: ['Novos Profissionais (89,6%)', 'Participantes Recorrentes (10,4%)'],
         datasets: [{
           data: [rawData.q2.e2_new, rawData.q2.overlap],
           backgroundColor: ['#059669', '#d97706'],

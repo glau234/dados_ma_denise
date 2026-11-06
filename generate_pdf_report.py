@@ -51,7 +51,7 @@ for at in autotexts1: at.set_color('white'); at.set_weight('bold')
 ax1.set_title('P1: Correspondência do Survey com os Eventos\n(Amostra com Identificação N=226)', fontsize=11, fontweight='bold', pad=10)
 
 # Subplot 2: Q2
-labels2 = ['Novos Inscritos Atraídos\n(344 pessoas - 89,1%)', 'Participantes Recorrentes\n(42 pessoas - 10,9%)']
+labels2 = ['Novos Inscritos Atraídos\n(346 pessoas - 89,6%)', 'Participantes Recorrentes\n(40 pessoas - 10,4%)']
 sizes2 = [data['q2']['e2_new'], data['q2']['overlap']]
 colors2 = ['#2563eb', '#f59e0b']
 explode2 = (0.05, 0)
@@ -462,7 +462,7 @@ html_doc = f"""<!DOCTYPE html>
         <strong>Ano Base dos Dados:</strong> 2024
       </div>
       <div class="meta-col">
-        <strong>Universo de Inscrições:</strong> 1.128 participações (1.086 indivíduos)
+        <strong>Universo de Inscrições:</strong> 1.128 participações (1.088 indivíduos)
       </div>
       <div class="meta-col">
         <strong>Amostra do Survey:</strong> 521 respondentes (245 prática ativa)
@@ -478,7 +478,7 @@ html_doc = f"""<!DOCTYPE html>
     <div class="kpi-card" style="margin-right: 5px;">
       <div class="kpi-title">Inscrições Eventos</div>
       <div class="kpi-value">1.128</div>
-      <div class="kpi-sub">1.086 indivíduos únicos</div>
+      <div class="kpi-sub">1.088 indivíduos únicos</div>
     </div>
     <div class="kpi-card" style="margin-right: 5px;">
       <div class="kpi-title">Respondentes Survey</div>
@@ -487,13 +487,13 @@ html_doc = f"""<!DOCTYPE html>
     </div>
     <div class="kpi-card" style="margin-right: 5px;">
       <div class="kpi-title">Taxa Renovação E2</div>
-      <div class="kpi-value" style="color: #16a34a;">89,1%</div>
-      <div class="kpi-sub">344 novos participantes</div>
+      <div class="kpi-value" style="color: #16a34a;">89,6%</div>
+      <div class="kpi-sub">346 novos participantes</div>
     </div>
     <div class="kpi-card" style="margin-right: 5px;">
       <div class="kpi-title">Recorrência Geral</div>
-      <div class="kpi-value" style="color: #d97706;">3,87%</div>
-      <div class="kpi-sub">42 em ambos os eventos</div>
+      <div class="kpi-value" style="color: #d97706;">3,68%</div>
+      <div class="kpi-sub">40 em ambos os eventos</div>
     </div>
     <div class="kpi-card" style="margin-right: 5px;">
       <div class="kpi-title">Participação Feminina</div>
@@ -516,7 +516,7 @@ html_doc = f"""<!DOCTYPE html>
     <strong>Principais Achados em Síntese:</strong>
     <ul style="margin: 4px 0 0 16px; padding: 0;">
       <li><strong>Independência entre Survey e Eventos:</strong> 73,5% dos respondentes identificados do survey são profissionais externos que não participaram dos eventos de 2024. O survey atingiu uma rede muito mais ampla.</li>
-      <li><strong>Alta Renovação de Público:</strong> No Evento 2, 89,1% dos profissionais eram estreantes. Houve apenas 42 pessoas recorrentes entre os dois eventos (taxa de sobreposição de apenas 3,87%).</li>
+      <li><strong>Alta Renovação de Público:</strong> No Evento 2, 89,6% dos profissionais eram estreantes. Houve apenas 40 pessoas recorrentes entre os dois eventos (taxa de sobreposição de apenas 3,68%).</li>
       <li><strong>Clivagem Estrutural (ACM):</strong> A Análise de Correspondência Múltipla demonstrou uma oposição clara entre o Polo Acadêmico-Sênior (Doutores e Pós-doutores, >10 anos de atuação, pesquisadores) e o Polo Governamental-Operacional (Especialistas, até 5 anos, atuando na gestão).</li>
       <li><strong>Padrão Federativo da Saúde:</strong> Quase metade dos inscritos (49,4%) é da área de Saúde. O setor Saúde concentra 67,4% dos participantes municipais e 55,9% dos estaduais, enquanto o governo federal abriga diversidade de políticas.</li>
       <li><strong>Três Perfis Operacionais (Clusters):</strong> 13,1% são especialistas altamente técnicos em ATS e Síntese; 37,1% são avaliadores ocasionais/periféricos; e 49,8% formam o núcleo multimetodológico ativo do Estado brasileiro.</li>
@@ -532,7 +532,7 @@ html_doc = f"""<!DOCTYPE html>
     <strong>Metodologia de Pareamento:</strong> O questionário no Microsoft Forms foi configurado sem exigência de autenticação de login corporativo, gerando a resposta literal <code>anonymous</code> para a totalidade dos 521 registros na coluna <em>Email</em>. Todavia, em blocos opcionais ao final (autorização para entrevista e consentimento com o Ministério da Saúde), <strong>226 respondentes (43,4%) forneceram voluntariamente seus dados</strong> (Nome completo, CPF e/ou e-mail). Os outros <strong>295 participantes (56,6%)</strong> mantiveram anonimato.
   </p>
   <p>
-    O cruzamento determinístico dos 226 identificados contra o banco unificado de inscritos dos eventos (1.086 indivíduos únicos) apresentou o seguinte resultado:
+    O cruzamento determinístico dos 226 identificados contra o banco unificado de inscritos dos eventos (1.088 indivíduos únicos) apresentou o seguinte resultado:
   </p>
 
   <table>
@@ -590,7 +590,7 @@ html_doc = f"""<!DOCTYPE html>
     <strong>Diagnóstico: Predomínio absoluto de renovação e atração de novos profissionais.</strong>
   </p>
   <p>
-    Ao comparar o Evento 1 (742 participantes) com o Evento 2 (386 participantes), constata-se uma intersecção de apenas **42 indivíduos**. Isso demonstra que o segundo evento mobilizou massivamente novos públicos técnicos que não haviam aderido ao evento anterior.
+    Ao comparar o Evento 1 (742 participantes) com o Evento 2 (386 participantes), constata-se uma intersecção de apenas **40 indivíduos**. Isso demonstra que o segundo evento mobilizou massivamente novos públicos técnicos que não haviam aderido ao evento anterior.
   </p>
 
   <table>
@@ -605,27 +605,27 @@ html_doc = f"""<!DOCTYPE html>
     <tbody>
       <tr>
         <td><strong>Taxa de Renovação no Evento 2</strong></td>
-        <td style="text-align: center; font-weight: bold; color: #16a34a;">344</td>
-        <td style="text-align: center; font-weight: bold; color: #16a34a;">89,12%</td>
+        <td style="text-align: center; font-weight: bold; color: #16a34a;">346</td>
+        <td style="text-align: center; font-weight: bold; color: #16a34a;">89,64%</td>
         <td>Novos profissionais atraídos pelo recorte prático</td>
       </tr>
       <tr>
         <td>Taxa de Recorrência no Evento 2</td>
-        <td style="text-align: center; color: #d97706;">42</td>
-        <td style="text-align: center; color: #d97706;">10,88%</td>
+        <td style="text-align: center; color: #d97706;">40</td>
+        <td style="text-align: center; color: #d97706;">10,36%</td>
         <td>Público fiel vindo do Evento 1</td>
       </tr>
       <tr>
         <td>Retenção do Evento 1 no Evento 2</td>
-        <td style="text-align: center;">42 / 742</td>
-        <td style="text-align: center;">5,66%</td>
+        <td style="text-align: center;">40 / 742</td>
+        <td style="text-align: center;">5,39%</td>
         <td>Baixa migração direta entre os eventos</td>
       </tr>
       <tr style="background-color: #f1f5f9; font-weight: bold;">
         <td>Total de Indivíduos Únicos na Comunidade</td>
-        <td style="text-align: center;">1.086</td>
+        <td style="text-align: center;">1.088</td>
         <td style="text-align: center;">100,00%</td>
-        <td>Sobreposição global representa apenas 3,87%</td>
+        <td>Sobreposição global representa apenas 3,68%</td>
       </tr>
     </tbody>
   </table>
@@ -697,7 +697,7 @@ html_doc = f"""<!DOCTYPE html>
 
   <h3>4.1 Distribuição Geográfica e Federativa</h3>
   <p>
-    O Centro-Oeste concentra quase a metade do público dos eventos (**49,56%** / 559 inscrições), com primazia do Distrito Federal (**45,39%** / 512 inscrições), motivada pela presença dos ministérios federais e órgãos setoriais. O Sudeste representa **23,85%** (destaque para SP com 11,0% e RJ com 8,0%), seguido pelo Nordeste (**12,23%**, com BA e CE), Sul (**6,47%**) e Norte (**5,76%**). No survey, a distribuição é mais desconcentrada, alcançando mais de 20 UFs.
+    O Centro-Oeste concentra quase a metade do público dos eventos (**49,65%** / 560 inscrições), com primazia do Distrito Federal (**45,48%** / 513 inscrições), motivada pela presença dos ministérios federais e órgãos setoriais. O Sudeste representa **23,85%** (destaque para SP com 11,0% e RJ com 8,0%), seguido pelo Nordeste (**12,23%**, com BA e CE), Sul (**6,47%**) e Norte (**5,76%**). No survey, a distribuição é mais desconcentrada, alcançando mais de 20 UFs.
   </p>
 
   <h3>4.2 Esfera de Atuação e a Correlação Estrutural com a Saúde</h3>

@@ -42,7 +42,7 @@ ax1.pie([data['q1']['external'], data['q1']['any_match']],
 ax1.set_title('P1: Correspondência Survey x Eventos\n(Respondentes Identificados N=226)', fontsize=10.5, fontweight='bold', pad=8)
 
 ax2.pie([data['q2']['e2_new'], data['q2']['overlap']],
-        labels=['Novos Profissionais\n(344 pessoas - 89,1%)', 'Recorrentes do E1\n(42 pessoas - 10,9%)'],
+        labels=['Novos Profissionais\n(346 pessoas - 89,6%)', 'Recorrentes do E1\n(40 pessoas - 10,4%)'],
         colors=['#2563eb', '#f59e0b'], autopct='%1.1f%%', startangle=140,
         textprops={'fontsize': 9}, wedgeprops={'edgecolor': 'white', 'linewidth': 1.5})
 ax2.set_title('P2: Renovação no Evento 2 (Práticas)\n(Inscritos Totais N=386)', fontsize=10.5, fontweight='bold', pad=8)
@@ -227,7 +227,7 @@ p_sub.font.color.rgb = RGBColor(203, 213, 225)
 p_sub.space_before = Pt(10)
 
 p_meta = tf_capa.add_paragraph()
-p_meta.text = "Bases Analisadas: 1.128 Inscrições em Eventos (1.086 Indivíduos Únicos) | 521 Respondentes do Survey Nacional"
+p_meta.text = "Bases Analisadas: 1.128 Inscrições em Eventos (1.088 Indivíduos Únicos) | 521 Respondentes do Survey Nacional"
 p_meta.font.size = Pt(11)
 p_meta.font.color.rgb = RGBColor(148, 163, 184)
 p_meta.space_before = Pt(24)
@@ -239,10 +239,10 @@ slide2 = prs.slides.add_slide(blank_layout)
 apply_slide_header(slide2, "Painel de Indicadores Globais da Pesquisa", "Visão Geral Executiva")
 
 kpi_data = [
-    ("1.128", "Inscrições nos Eventos", "1.086 indivíduos únicos desduplicados", BLUE),
+    ("1.128", "Inscrições nos Eventos", "1.088 indivíduos únicos desduplicados", BLUE),
     ("521", "Respondentes do Survey", "245 profissionais com prática profunda", NAVY),
-    ("89,1%", "Taxa de Renovação", "Novos profissionais no Evento 2 (Práticas)", EMERALD),
-    ("3,87%", "Recorrência Geral", "Apenas 42 pessoas em ambos os eventos", RGBColor(217, 119, 6)),
+    ("89,6%", "Taxa de Renovação", "Novos profissionais no Evento 2 (Práticas)", EMERALD),
+    ("3,68%", "Recorrência Geral", "Apenas 40 pessoas em ambos os eventos", RGBColor(217, 119, 6)),
     ("60,2%", "Maioria Feminina", "63,0% no survey de escuta nacional", RGBColor(124, 58, 237)),
     ("73,5%", "Tradução p/ Decisores", "33,1% divulgam p/ sociedade em geral", RGBColor(225, 29, 72))
 ]
@@ -303,7 +303,7 @@ bullet_points_s3 = [
     "Dos 521 respondentes, 295 (56,6%) responderam anonimamente e 226 (43,4%) forneceram contatos voluntários para entrevistas.",
     "Entre os 226 identificados, 73,45% (166 pessoas) não constam em nenhum dos eventos.",
     "Apenas 26,55% (60 pessoas) participaram de pelo menos um evento (47 no Evento 1, 17 no Evento 2 e 4 em ambos).",
-    "Em relação ao universo total de inscritos nos eventos (1.086 indivíduos), apenas ~5,5% responderam ao survey identificado."
+    "Em relação ao universo total de inscritos nos eventos (1.088 indivíduos), apenas ~5,5% responderam ao survey identificado."
 ]
 for pt in bullet_points_s3:
     p = tf3.add_paragraph()
@@ -331,10 +331,10 @@ p1.font.bold = True
 p1.font.color.rgb = EMERALD
 
 bullet_points_s4 = [
-    "Taxa de Renovação no Evento 2: 89,12% dos participantes eram estreantes que não haviam se inscrito no primeiro evento (344 de 386).",
-    "Taxa de Recorrência no Evento 2: Apenas 10,88% (42 indivíduos) foram participantes do primeiro evento.",
-    "Taxa de Retenção do Evento 1 no Evento 2: Apenas 5,66% dos 742 inscritos do Evento 1 migraram para o segundo evento.",
-    "Comunidade Única Consolidada: Somando os dois encontros, alcançou-se 1.086 profissionais únicos no país.",
+    "Taxa de Renovação no Evento 2: 89,64% dos participantes eram estreantes que não haviam se inscrito no primeiro evento (346 de 386).",
+    "Taxa de Recorrência no Evento 2: Apenas 10,36% (40 indivíduos) foram participantes do primeiro evento.",
+    "Taxa de Retenção do Evento 1 no Evento 2: Apenas 5,39% dos 742 inscritos do Evento 1 migraram para o segundo evento.",
+    "Comunidade Única Consolidada: Somando os dois encontros, alcançou-se 1.088 profissionais únicos no país.",
     "Conclusão: O recorte aplicado de 'Práticas em Avaliação' do segundo evento mobilizou com sucesso um novo público técnico."
 ]
 for pt in bullet_points_s4:
@@ -364,9 +364,9 @@ for i, h in enumerate(headers):
         p.font.color.rgb = WHITE
 
 data_t4 = [
-    ["Novos Inscritos Atraídos (E2)", "344", "89,12%"],
-    ["Recorrentes em Ambos os Eventos", "42", "10,88%"],
-    ["Comunidade de Indivíduos Únicos", "1.086", "100,00%"]
+    ["Novos Inscritos Atraídos (E2)", "346", "89,64%"],
+    ["Recorrentes em Ambos os Eventos", "40", "10,36%"],
+    ["Comunidade de Indivíduos Únicos", "1.088", "100,00%"]
 ]
 for r_idx, row_vals in enumerate(data_t4, 1):
     for c_idx, val in enumerate(row_vals):

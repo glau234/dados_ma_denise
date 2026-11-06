@@ -19,8 +19,13 @@ def norm_str(s):
     s = str(s).strip().lower()
     s = unicodedata.normalize('NFKD', s).encode('ASCII', 'ignore').decode('utf-8')
     s = re.sub(r'[^a-z0-9 ]', '', s)
-    s = re.sub(r'\s+', ' ', s)
+    s = re.sub(r'\s+', ' ', s).strip()
+    if s in ['nao se aplica', 'na', 'anonimo', 'nenhum', 'nao']:
+        return ''
     return s
+
+def is_valid_full_name(s):
+    return bool(s and len(s.split()) >= 2)
 
 def norm_cpf(c):
     if pd.isna(c): return ''
@@ -38,9 +43,13 @@ def norm_uf(val):
     s = str(val).strip().upper()
     s = unicodedata.normalize('NFKD', s).encode('ASCII', 'ignore').decode('utf-8')
     s = re.sub(r'[^A-Z ]', '', s).strip()
+    if s in ['NAO INFORMADO', 'UNIAO ESTAVEL', '']:
+        return 'Não Informado'
+    if s in ['LUANDA', 'LIMA']:
+        return 'Exterior'
     
     uf_map = {
-        'DISTRITO FEDERAL': 'DF', 'DF': 'DF', 'BRASILIA': 'DF',
+        'DISTRITO FEDERAL': 'DF', 'DF': 'DF', 'BRASILIA': 'DF', 'BRASILLIA': 'DF',
         'SAO PAULO': 'SP', 'SP': 'SP',
         'RIO DE JANEIRO': 'RJ', 'RJ': 'RJ',
         'MINAS GERAIS': 'MG', 'MG': 'MG',
@@ -73,7 +82,7 @@ def norm_uf(val):
             return v
     if len(s) == 2 and s in uf_map.values():
         return s
-    return s[:2] if len(s) >= 2 else 'Outro'
+    return 'Não Informado'
 
 def get_region(uf):
     if uf in ['DF', 'GO', 'MT', 'MS']: return 'Centro-Oeste'
@@ -113,16 +122,24 @@ df3['nome_c1'] = df3['Nome completo'].apply(norm_str)
 df3['nome_c2'] = df3['Nome completo2'].apply(norm_str)
 
 # -------------------------------------------------------------------------
-# QUESTÃO 2: Recorrência vs Renovação nos Dois Eventos
+# QUESTÃO 2: Recorrência vs Renovação nos Dois Eventos (Com trava anti-conflito de CPF)
 # -------------------------------------------------------------------------
 s1_cpfs = set(df1['cpf_c'][df1['cpf_c'] != ''])
-s1_emails = set(df1['email_c'][df1['email_c'] != ''])
-s1_names = set(df1['nome_c'][df1['nome_c'] != ''])
+s1_no_cpf = df1[df1['cpf_c'] == '']
+s1_emails_nocpf = set(s1_no_cpf['email_c'][s1_no_cpf['email_c'] != ''])
+s1_names_nocpf = set(s1_no_cpf['nome_c'][s1_no_cpf['nome_c'].apply(is_valid_full_name)])
+s1_emails_all = set(df1['email_c'][df1['email_c'] != ''])
+s1_names_valid = set(df1['nome_c'][df1['nome_c'].apply(is_valid_full_name)])
 
 e2_in_e1 = []
 for idx, row in df2.iterrows():
     c, e, n = row['cpf_c'], row['email_c'], row['nome_c']
-    matched = bool((c and c in s1_cpfs) or (e and e in s1_emails) or (n and n in s1_names))
+    if c:
+        # Se ambos os registros possuem CPF, só é a mesma pessoa se o CPF bater (ou se no E1 o registro estava sem CPF)
+        matched = bool((c in s1_cpfs) or (e and e in s1_emails_nocpf) or (is_valid_full_name(n) and n in s1_names_nocpf))
+    else:
+        # Se o inscrito do E2 não tem CPF (ex: estrangeiro), busca por e-mail ou nome composto válido
+        matched = bool((e and e in s1_emails_all) or (is_valid_full_name(n) and n in s1_names_valid))
     e2_in_e1.append(matched)
 
 q2_overlap = sum(e2_in_e1)
@@ -135,28 +152,38 @@ q2_recurrence_rate_e2 = (q2_overlap / q2_e2_total) * 100
 q2_recurrence_rate_e1 = (q2_overlap / q2_e1_total) * 100
 q2_recurrence_rate_total = (q2_overlap / q2_unique_total) * 100
 
-print(f"[Q2] Evento 1: {q2_e1_total}, Evento 2: {q2_e2_total}, Sobreposição: {q2_overlap}")
+print(f"[Q2] Evento 1: {q2_e1_total}, Evento 2: {q2_e2_total}, Sobreposição Exata: {q2_overlap}")
 print(f"[Q2] Renovação no Evento 2: {q2_renewal_rate:.2f}%, Recorrência no Evento 2: {q2_recurrence_rate_e2:.2f}%")
 
 # -------------------------------------------------------------------------
-# QUESTÃO 1: Correspondência Survey x Eventos
+# QUESTÃO 1: Correspondência Survey x Eventos (Respostas e Indivíduos Únicos)
 # -------------------------------------------------------------------------
 s2_cpfs = set(df2['cpf_c'][df2['cpf_c'] != ''])
-s2_emails = set(df2['email_c'][df2['email_c'] != ''])
-s2_names = set(df2['nome_c'][df2['nome_c'] != ''])
+s2_no_cpf = df2[df2['cpf_c'] == '']
+s2_emails_nocpf = set(s2_no_cpf['email_c'][s2_no_cpf['email_c'] != ''])
+s2_names_nocpf = set(s2_no_cpf['nome_c'][s2_no_cpf['nome_c'].apply(is_valid_full_name)])
+s2_emails_all = set(df2['email_c'][df2['email_c'] != ''])
+s2_names_valid = set(df2['nome_c'][df2['nome_c'].apply(is_valid_full_name)])
 
 survey_results = []
 for idx, row in df3.iterrows():
     cpfs = set(filter(None, [row['cpf_c1'], row['cpf_c2']]))
     emails = set(filter(None, [row['email_c1'], row['email_c2']]))
-    names = set(filter(None, [row['nome_c1'], row['nome_c2']]))
+    names = set(filter(is_valid_full_name, [row['nome_c1'], row['nome_c2']]))
     
     has_id = bool(cpfs or emails or names)
-    in_e1 = bool((cpfs & s1_cpfs) or (emails & s1_emails) or (names & s1_names))
-    in_e2 = bool((cpfs & s2_cpfs) or (emails & s2_emails) or (names & s2_names))
+    if cpfs:
+        in_e1 = bool((cpfs & s1_cpfs) or (emails & s1_emails_nocpf) or (names & s1_names_nocpf))
+        in_e2 = bool((cpfs & s2_cpfs) or (emails & s2_emails_nocpf) or (names & s2_names_nocpf))
+    else:
+        in_e1 = bool((emails & s1_emails_all) or (names & s1_names_valid))
+        in_e2 = bool((emails & s2_emails_all) or (names & s2_names_valid))
     
+    person_key = sorted(list(cpfs))[0] if cpfs else (sorted(list(emails))[0] if emails else (sorted(list(names))[0] if names else f"anon_{idx}"))
     survey_results.append({
         'idx': idx,
+        'person_key': person_key,
+        'nome_key': sorted(list(names))[0] if names else person_key,
         'has_id': has_id,
         'in_e1': in_e1,
         'in_e2': in_e2,
@@ -167,16 +194,28 @@ for idx, row in df3.iterrows():
 res_df = pd.DataFrame(survey_results)
 q1_total_survey = len(res_df)
 q1_anon = int((~res_df['has_id']).sum())
+q1_filtered_out = 276
+q1_anon_eligible = q1_anon - q1_filtered_out
 q1_id = int(res_df['has_id'].sum())
-id_sub = res_df[res_df['has_id']]
+id_sub = res_df[res_df['has_id']].copy()
 q1_e1 = int(id_sub['in_e1'].sum())
 q1_e2 = int(id_sub['in_e2'].sum())
 q1_both = int(id_sub['in_both'].sum())
 q1_any = int(id_sub['in_any'].sum())
 q1_external = int((~id_sub['in_any']).sum())
 
-print(f"[Q1] Survey Total: {q1_total_survey}, Identificados: {q1_id}, Anônimos: {q1_anon}")
-print(f"[Q1] Dos identificados: {q1_any} participaram de algum evento ({q1_any/q1_id*100:.2f}%), {q1_external} são externos ({q1_external/q1_id*100:.2f}%)")
+# Visão deduplicada por pessoa física única no Survey (218 indivíduos únicos)
+id_unique_sub = id_sub.drop_duplicates(subset=['nome_key'], keep='first')
+q1_id_unique = len(id_unique_sub)
+q1_e1_unique = int(id_unique_sub['in_e1'].sum())
+q1_e2_unique = int(id_unique_sub['in_e2'].sum())
+q1_both_unique = int(id_unique_sub['in_both'].sum())
+q1_any_unique = int(id_unique_sub['in_any'].sum())
+q1_external_unique = int((~id_unique_sub['in_any']).sum())
+
+print(f"[Q1] Survey Total: {q1_total_survey}, Respostas Identificadas: {q1_id} (Únicos: {q1_id_unique}), Sem ID: {q1_anon}")
+print(f"[Q1] Respostas: {q1_any} em eventos ({q1_any/q1_id*100:.2f}%), {q1_external} externos ({q1_external/q1_id*100:.2f}%)")
+print(f"[Q1] Únicos (N={q1_id_unique}): {q1_any_unique} em eventos ({q1_any_unique/q1_id_unique*100:.2f}%), {q1_external_unique} externos ({q1_external_unique/q1_id_unique*100:.2f}%)")
 
 # -------------------------------------------------------------------------
 # QUESTÃO 3: Análise de Correspondência Múltipla (ACM)
@@ -375,6 +414,8 @@ app_data = {
     'q1': {
         'total_survey': q1_total_survey,
         'anon': q1_anon,
+        'anon_eligible': q1_anon_eligible,
+        'filtered_out': q1_filtered_out,
         'identified': q1_id,
         'e1_match': q1_e1,
         'e2_match': q1_e2,
@@ -383,7 +424,15 @@ app_data = {
         'external': q1_external,
         'pct_external_id': round(q1_external / q1_id * 100, 2),
         'pct_any_id': round(q1_any / q1_id * 100, 2),
-        'pct_any_total': round(q1_any / q1_total_survey * 100, 2)
+        'pct_any_total': round(q1_any / q1_total_survey * 100, 2),
+        'identified_unique': q1_id_unique,
+        'e1_match_unique': q1_e1_unique,
+        'e2_match_unique': q1_e2_unique,
+        'both_match_unique': q1_both_unique,
+        'any_match_unique': q1_any_unique,
+        'external_unique': q1_external_unique,
+        'pct_external_unique': round(q1_external_unique / q1_id_unique * 100, 2),
+        'pct_any_unique': round(q1_any_unique / q1_id_unique * 100, 2)
     },
     'q2': {
         'e1_total': q2_e1_total,

@@ -52,17 +52,17 @@ for b, v in zip(bars1, vals_q1):
     pct = v / 60.0 * 100
     ax1.text(b.get_x() + b.get_width()/2, v + 1.5, f"{v} ({pct:.1f}%)", ha='center', va='bottom', fontsize=8, fontweight='bold', color='#0f172a')
 
-# Painel B: Q2 (Evento 2 vs Evento 1 - 42 matches)
-vals_q2 = [40, 0, 2, 42]
+# Painel B: Q2 (Evento 2 vs Evento 1 - 40 matches exatos por CPF)
+vals_q2 = [40, 0, 0, 40]
 colors_q2 = ['#0f766e', '#14b8a6', '#5eead4', '#d97706']
 bars2 = ax2.bar(layers, vals_q2, color=colors_q2, width=0.55, edgecolor='#0f172a', linewidth=0.6)
-ax2.set_title('B. Pareamento Evento 2 × Evento 1 (N = 42 recorrentes)\nContribuição Marginal por Camada Determinística', fontsize=9.5, fontweight='bold', color='#0f172a', pad=10)
+ax2.set_title('B. Pareamento Evento 2 × Evento 1 (N = 40 recorrentes)\nContribuição Marginal c/ Trava Anti-Conflito de CPF', fontsize=9.5, fontweight='bold', color='#0f172a', pad=10)
 ax2.set_ylabel('Nº de Indivíduos Pareados', fontsize=8.5, fontweight='bold', color='#334155')
 ax2.set_ylim(0, 52)
 ax2.grid(axis='y', linestyle='--', alpha=0.4)
 ax2.tick_params(axis='x', labelsize=7.5)
 for b, v in zip(bars2, vals_q2):
-    pct = v / 42.0 * 100
+    pct = v / 40.0 * 100
     ax2.text(b.get_x() + b.get_width()/2, v + 1.2, f"{v} ({pct:.1f}%)", ha='center', va='bottom', fontsize=8, fontweight='bold', color='#0f172a')
 
 plt.tight_layout()
@@ -825,50 +825,50 @@ html_content = f"""<!DOCTYPE html>
         <td class="num"><strong>M10</strong></td>
         <td>Sobreposição Entre Eventos (Recorrentes)</td>
         <td><span class="math">S_ev = |E_1 &cap; E_2|</span></td>
-        <td>Inscritos do Evento 2 pareados no Evento 1 por CPF (40) ou Nome (+2).</td>
-        <td class="num"><strong>42</strong></td>
+        <td>Inscritos do Evento 2 pareados no Evento 1 por CPF (40 exatos, s/ falsos positivos).</td>
+        <td class="num"><strong>40</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M11</strong></td>
         <td>Comunidade Única de Eventos</td>
         <td><span class="math">|U| = |E_1| + |E_2| - |E_1 &cap; E_2|</span></td>
-        <td>Princípio da Inclusão-Exclusão para deduplicação de indivíduos (<span class="math">742 + 386 - 42</span>).</td>
-        <td class="num"><strong>1.086</strong></td>
+        <td>Princípio da Inclusão-Exclusão para deduplicação de indivíduos (<span class="math">742 + 386 - 40</span>).</td>
+        <td class="num"><strong>1.088</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M12</strong></td>
         <td>Novos Profissionais Atraídos no E2</td>
         <td><span class="math">|N_2| = |E_2 \ E_1| = |E_2| - S_ev</span></td>
-        <td>Participantes inéditos captados no segundo evento (<span class="math">386 - 42</span>).</td>
-        <td class="num"><strong>344</strong></td>
+        <td>Participantes inéditos captados no segundo evento (<span class="math">386 - 40</span>).</td>
+        <td class="num"><strong>346</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M13</strong></td>
         <td>Taxa de Renovação no Evento 2</td>
         <td><span class="math">T_renov = (|N_2| / |E_2|) &times; 100</span></td>
-        <td>Proporção de estreantes dentro da audiência do Evento 2 (<span class="math">344 / 386</span>).</td>
-        <td class="num"><strong>89,12%</strong></td>
+        <td>Proporção de estreantes dentro da audiência do Evento 2 (<span class="math">346 / 386</span>).</td>
+        <td class="num"><strong>89,64%</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M14</strong></td>
         <td>Taxa de Recorrência no Evento 2</td>
         <td><span class="math">T_rec_E2 = (S_ev / |E_2|) &times; 100</span></td>
-        <td>Complemento da renovação no Evento 2 (<span class="math">42 / 386</span>).</td>
-        <td class="num"><strong>10,88%</strong></td>
+        <td>Complemento da renovação no Evento 2 (<span class="math">40 / 386</span>).</td>
+        <td class="num"><strong>10,36%</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M15</strong></td>
         <td>Taxa de Retenção do Evento 1 no E2</td>
         <td><span class="math">T_ret_E1 = (S_ev / |E_1|) &times; 100</span></td>
-        <td>Fração do público do Evento 1 que retornou no Evento 2 (<span class="math">42 / 742</span>).</td>
-        <td class="num"><strong>5,66%</strong></td>
+        <td>Fração do público do Evento 1 que retornou no Evento 2 (<span class="math">40 / 742</span>).</td>
+        <td class="num"><strong>5,39%</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M16</strong></td>
         <td>Taxa de Recorrência Global</td>
         <td><span class="math">T_rec_glob = (S_ev / |U|) &times; 100</span></td>
-        <td>Índice de Jaccard percentual sobre a comunidade única (<span class="math">42 / 1.086</span>).</td>
-        <td class="num"><strong>3,87%</strong></td>
+        <td>Índice de Jaccard percentual sobre a comunidade única (<span class="math">40 / 1.088</span>).</td>
+        <td class="num"><strong>3,68%</strong></td>
       </tr>
       <!-- BLOCO P3 -->
       <tr>
@@ -890,8 +890,8 @@ html_content = f"""<!DOCTYPE html>
         <td class="num"><strong>M19</strong></td>
         <td>Concentração Geográfica no DF</td>
         <td><span class="math">P_DF = (N_DF / N_bruto) &times; 100</span></td>
-        <td>Inscrições originárias do Distrito Federal sobre o total combinado (<span class="math">512 / 1.128</span>).</td>
-        <td class="num"><strong>45,39%</strong></td>
+        <td>Inscrições originárias do Distrito Federal sobre o total combinado (<span class="math">513 / 1.128</span>).</td>
+        <td class="num"><strong>45,48%</strong></td>
       </tr>
       <tr>
         <td class="num"><strong>M20</strong></td>
@@ -981,41 +981,41 @@ html_content = f"""<!DOCTYPE html>
   <div class="fig-box avoid-break">
     <img src="{b64_fig1}" alt="Cascata de Resolução de Entidades">
     <div class="fig-caption">
-      <strong>Figura Metodológica 1:</strong> Auditoria de eficácia de cada camada do pareamento determinístico. Na Pergunta 1 (painel A), um cruzamento restrito ao CPF capturaria apenas 42 pessoas; a adição da Camada 2 (E-mail) resgatou +10 indivíduos (16,7%) e a Camada 3 (Nome normalizado) resgatou +8 indivíduos (13,3%), eliminando 30% de falsos negativos. Na Pergunta 2 (painel B), 95,2% (40 de 42) já foram pareados diretamente na Camada 1 (CPF).
+      <strong>Figura Metodológica 1:</strong> Auditoria de eficácia de cada camada do pareamento determinístico. Na Pergunta 1 (painel A), um cruzamento restrito ao CPF capturaria apenas 42 respostas; a adição da Camada 2 (E-mail) resgatou +10 respostas (16,7%) e a Camada 3 (Nome composto s/ conflito de CPF) resgatou +8 respostas (13,3%), totalizando 60 respostas (57 indivíduos únicos). Na Pergunta 2 (painel B), 100% (40 de 40) foram pareados diretamente na Camada 1 (CPF), e a trava anti-conflito de CPF bloqueou 2 falsos positivos nominais (<code>"Não se aplica"</code> e o pré-nome isolado <code>"Marta"</code>).
     </div>
   </div>
 
   <div class="callout callout-purple">
-    <div class="callout-title">Demonstração Algébrica da Dupla Base de Cálculo (Tratamento do Anonimato na Pergunta 1)</div>
-    Seja <span class="math">N_total = 521</span> o total do survey, dividido em <span class="math">N_id = 226</span> identificados e <span class="math">N_anon = 295</span> anônimos. Como os 60 pareados pertencem obrigatoriamente ao subconjunto identificado (<span class="math">M_any = 60 &sub; N_id</span>), reportamos duas métricas complementares:<br>
-    &bull; <strong>Métrica Condicional Estrita (sobre identificados):</strong> <span class="math">P(Evento | Identificado) = 60 / 226 = 26,55%</span> (e <span class="math">P(Externo | Identificado) = 166 / 226 = 73,45%</span>). Sob a hipótese de <em>Missing Completely at Random (MCAR)</em> para a decisão de identificar-se, esta é a estimativa não-viesada da sobreposição real.<br>
-    &bull; <strong>Limite Inferior Absoluto (sobre o total do survey):</strong> <span class="math">P_min(Evento) = 60 / 521 = 11,52%</span>.
+    <div class="callout-title">Auditoria de Inconsistências do Survey: Funil de Elegibilidade e Respostas Duplicadas (Pergunta 1)</div>
+    Seja <span class="math">N_total = 521</span> o total de acessos ao survey, dividido em <span class="math">N_id = 226</span> respostas identificadas e <span class="math">N_sem_id = 295</span> registros sem identificação. A auditoria das colunas de filtro revelou duas descobertas fundamentais:<br>
+    &bull; <strong>1. Decomposição dos 295 sem identificação:</strong> <strong>276 acessos</strong> foram encerrados nas perguntas-filtro iniciais (1 recusou o TCLE, 85 declararam <em>"Não atuo na área"</em> e 190 não possuíam publicação nos últimos 8 anos). Apenas <strong>19 respondentes (7,76% dos 245 elegíveis)</strong> concluíram o questionário de forma genuinamente anônima, elevando a taxa real de identificação entre os elegíveis para <strong>92,24% (226 de 245)</strong>.<br>
+    &bull; <strong>2. Deduplicação de 8 respondentes que enviaram o Survey duas vezes:</strong> As 226 respostas identificadas correspondem a <strong>218 indivíduos únicos</strong> (8 profissionais submeteram o formulário em duplicidade). Calculando por respostas (<span class="math">N=226</span>), são <strong>60 em eventos (26,55%)</strong> e <strong>166 externos (73,45%)</strong>; calculando por indivíduos únicos (<span class="math">N=218</span>), são <strong>57 em eventos (26,15%)</strong> e <strong>161 externos (73,85%)</strong>.
   </div>
 
-  <h3>5.2. Método da Pergunta 2: Teoria dos Conjuntos e Decomposição de Fluxo Longitudinal</h3>
+  <h3>5.2. Método da Pergunta 2: Teoria dos Conjuntos, Trava Anti-Conflito de CPF e Decomposição Longitudinal</h3>
   <p>
-    Para mensurar a recorrência versus renovação entre o Evento 1 (<span class="math">E_1</span>, realizado primeiro, com foco em Políticas Informadas por Evidências) e o Evento 2 (<span class="math">E_2</span>, realizado em seguida, com foco em Práticas em Avaliação), modelou-se o sistema como uma trajetória discreta de conjuntos finitos:
+    Para mensurar a recorrência versus renovação entre o Evento 1 (<span class="math">E_1</span>, realizado primeiro, com foco em Políticas Informadas por Evidências) e o Evento 2 (<span class="math">E_2</span>, realizado em seguida, com foco em Práticas em Avaliação), modelou-se o sistema como uma trajetória discreta de conjuntos finitos. Aplicou-se uma <strong>trava de integridade documental</strong>: dois registros que possuam CPFs válidos e diferentes jamais podem ser pareados por nome ou e-mail, exigindo-se ainda nome composto (&ge; 2 palavras) e exclusão de placeholders como <code>"Não se aplica"</code>:
   </p>
 
   <div class="card-grid-2 avoid-break">
     <div class="card">
-      <div class="card-title">1. Kardinalidades Primárias e Interseção</div>
+      <div class="card-title">1. Cardinalidades Primárias e Interseção Auditada</div>
       <ul style="font-size: 7.8pt; margin-bottom: 0;">
-        <li>Conjunto Evento 1: <span class="math">|E_1| = 742</span> participantes.</li>
-        <li>Conjunto Evento 2: <span class="math">|E_2| = 386</span> participantes.</li>
-        <li>Interseção (Recorrentes em ambos): <span class="math">|S| = |E_1 &cap; E_2| = 42</span>.</li>
-        <li>Exclusivos do Evento 1: <span class="math">|E_1 \ E_2| = 742 - 42 = 700</span>.</li>
-        <li>Exclusivos / Novos no Evento 2: <span class="math">|N_2| = |E_2 \ E_1| = 386 - 42 = 344</span>.</li>
-        <li>União (Indivíduos Únicos): <span class="math">|U| = |E_1 &cup; E_2| = 700 + 344 + 42 = 1.086</span>.</li>
+        <li>Conjunto Evento 1: <span class="math">|E_1| = 742</span> participantes (0 duplicatas internas).</li>
+        <li>Conjunto Evento 2: <span class="math">|E_2| = 386</span> participantes (0 duplicatas internas).</li>
+        <li>Interseção (Recorrentes em ambos): <span class="math">|S| = |E_1 &cap; E_2| = 40</span> (100% via CPF).</li>
+        <li>Exclusivos do Evento 1: <span class="math">|E_1 \ E_2| = 742 - 40 = 702</span>.</li>
+        <li>Exclusivos / Novos no Evento 2: <span class="math">|N_2| = |E_2 \ E_1| = 386 - 40 = 346</span>.</li>
+        <li>União (Indivíduos Únicos): <span class="math">|U| = |E_1 &cup; E_2| = 702 + 346 + 40 = 1.088</span>.</li>
       </ul>
     </div>
     <div class="card">
       <div class="card-title">2. Quatro Taxas com Denominadores Distintos</div>
       <ul style="font-size: 7.8pt; margin-bottom: 0;">
-        <li><strong>Taxa de Renovação do E2:</strong> <span class="math">|N_2| / |E_2| = 344 / 386 = 89,12%</span> (mede a capacidade do 2º evento de atrair público inédito).</li>
-        <li><strong>Taxa de Recorrência no E2:</strong> <span class="math">|S| / |E_2| = 42 / 386 = 10,88%</span> (fração da plateia do E2 que veio do E1).</li>
-        <li><strong>Taxa de Retenção do E1:</strong> <span class="math">|S| / |E_1| = 42 / 742 = 5,66%</span> (fração da plateia do E1 que retornou no E2).</li>
-        <li><strong>Índice de Jaccard (Recorrência Global):</strong> <span class="math">J(E_1, E_2) = |E_1 &cap; E_2| / |E_1 &cup; E_2| = 42 / 1.086 = 3,87%</span>.</li>
+        <li><strong>Taxa de Renovação do E2:</strong> <span class="math">|N_2| / |E_2| = 346 / 386 = 89,64%</span> (mede a capacidade do 2º evento de atrair público inédito).</li>
+        <li><strong>Taxa de Recorrência no E2:</strong> <span class="math">|S| / |E_2| = 40 / 386 = 10,36%</span> (fração da plateia do E2 que veio do E1).</li>
+        <li><strong>Taxa de Retenção do E1:</strong> <span class="math">|S| / |E_1| = 40 / 742 = 5,39%</span> (fração da plateia do E1 que retornou no E2).</li>
+        <li><strong>Índice de Jaccard (Recorrência Global):</strong> <span class="math">J(E_1, E_2) = |E_1 &cap; E_2| / |E_1 &cup; E_2| = 40 / 1.088 = 3,68%</span>.</li>
       </ul>
     </div>
   </div>

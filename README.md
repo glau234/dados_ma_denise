@@ -14,18 +14,18 @@ Repositório com a análise estatística, econométrica e qualitativa integrada 
 ## 🎯 Síntese das 5 Perguntas de Pesquisa
 
 1. **Os respondentes do survey são os mesmos que participaram dos eventos?**
-   * **Não.** 73,5% dos respondentes identificados do survey (166 pessoas) são externos aos eventos de 2024. Apenas 26,5% (60 pessoas) participaram de pelo menos um evento. O survey funcionou como um canal aberto de escuta setorial muito mais amplo.
+   * **Não.** **73,45%** das respostas identificadas do survey (166 de 226; ou **73,85%** / 161 de 218 indivíduos únicos deduplicados) são externas aos eventos de 2024. Apenas **26,55%** (60 respostas / **57 indivíduos únicos**, ou 26,15%) participaram de pelo menos um evento. Dos 521 acessos brutos ao survey, 276 foram filtrados nas perguntas iniciais de elegibilidade e 245 concluíram o questionário (sendo 226 identificados [92,24%] e apenas 19 anônimos [7,76%]).
 
 2. **Existe uma recorrência da participação nos dois eventos ou renovação de profissionais?**
-   * **Forte renovação e atração de novos profissionais.** No Evento 2, **89,1% eram novos participantes** (344 de 386). A sobreposição direta entre ambos os eventos foi de apenas 42 pessoas (taxa de recorrência de **3,87%** sobre a comunidade única de 1.086 indivíduos).
+   * **Forte renovação e atração de novos profissionais.** No Evento 2, **89,64% eram novos participantes** (346 de 386). A sobreposição direta e auditada por CPF entre ambos os eventos foi de exatamente **40 pessoas** (taxa de recorrência de **10,36%** no Evento 2, retenção de **5,39%** do Evento 1 e recorrência global de **3,68%** sobre a comunidade única de **1.088 indivíduos**).
 
 3. **Qual a relação entre tempo de atuação, titulação e formação profissional (ACM)?**
    * A Análise de Correspondência Múltipla (ACM, $\chi^2 = 70,06, p < 0,001$) explicou 26,6% da inércia bidimensional, dividindo o campo entre o **Polo Acadêmico-Sênior** (Doutores e Pós-doutores, >10 a 20 anos de experiência, pesquisadores) e o **Polo Governamental-Operacional** (Especialistas e Mestres, até 5 anos, atuando na gestão pública e na ponta). A gerência atua isolada no topo vertical (+2,75).
 
 4. **Qual a distribuição espacial, esfera de atuação e área setorial de política pública?**
-   * **Geografia:** Concentração no Distrito Federal (45,4%) e Centro-Oeste (49,6%), seguidos por Sudeste (23,9% - SP e RJ) e Nordeste (12,2% - BA e CE).
-   * **Esfera:** Federal (43,2%), Estadual (19,5%), Academia/Outros (18,4%) e Municipal (8,4%).
-   * **O Padrão da Saúde:** Metade dos inscritos (49,4%) é da Saúde. Nos municípios, **67,4% são da Saúde**; nos estados, **55,9%**; enquanto no nível federal a atuação divide-se amplamente com Educação, Assistência Social e Planejamento.
+   * **Geografia:** Concentração no Distrito Federal (**45,48%** / 513 inscrições) e Centro-Oeste (**49,65%** / 560 inscrições), seguidos por Sudeste (23,94% - SP e RJ) e Nordeste (12,23% - BA e CE).
+   * **Esfera:** Federal (43,17%), Estadual (19,50%), Academia/Outros (18,35%) e Municipal (8,42%).
+   * **O Padrão da Saúde:** Metade dos inscritos (49,38%) é da Saúde. Nos municípios, **67,37% são da Saúde**; nos estados, **55,91%**; enquanto no nível federal a atuação divide-se amplamente com Educação, Assistência Social e Planejamento.
 
 5. **Qual a relação dos perfis profissionais segundo suas atribuições cotidianas (Clusters)?**
    * O modelo K-Means padronizado em 14 variáveis operacionais revelou 3 grupos:

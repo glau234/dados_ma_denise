@@ -73,22 +73,22 @@ html_content = f"""<!DOCTYPE html>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Inscrições Eventos</div>
         <div class="text-2xl font-bold text-slate-900 mt-1">1.128</div>
-        <div class="text-xs text-blue-600 mt-0.5 font-medium">1.086 indivíduos únicos</div>
+        <div class="text-xs text-blue-600 mt-0.5 font-medium">1.088 indivíduos únicos</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Respondentes Survey</div>
         <div class="text-2xl font-bold text-blue-700 mt-1">521</div>
-        <div class="text-xs text-slate-500 mt-0.5">245 com prática profunda</div>
+        <div class="text-xs text-slate-500 mt-0.5">245 completos (218 únicos id.)</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Taxa de Renovação</div>
-        <div class="text-2xl font-bold text-emerald-600 mt-1">89,1%</div>
-        <div class="text-xs text-emerald-700 mt-0.5 font-medium">Novos no 2º evento</div>
+        <div class="text-2xl font-bold text-emerald-600 mt-1">89,6%</div>
+        <div class="text-xs text-emerald-700 mt-0.5 font-medium">346 novos no 2º evento</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recorrência Geral</div>
-        <div class="text-2xl font-bold text-amber-600 mt-1">3,87%</div>
-        <div class="text-xs text-amber-700 mt-0.5">42 pessoas em ambos</div>
+        <div class="text-2xl font-bold text-amber-600 mt-1">3,68%</div>
+        <div class="text-xs text-amber-700 mt-0.5">Exatos 40 em ambos (CPF)</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
         <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Liderança Feminina</div>
@@ -144,14 +144,14 @@ html_content = f"""<!DOCTYPE html>
             <span class="text-xs font-bold uppercase text-blue-600 tracking-wider">Pergunta 1</span>
             <h3 class="font-bold text-slate-800">Os respondentes do survey são os mesmos dos eventos?</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              <strong>Não.</strong> O survey alcançou uma comunidade substancialmente externa aos eventos. Dos 226 respondentes identificados, <strong>73,5% (166 pessoas)</strong> não participaram de nenhum dos eventos, enquanto <strong>26,5% (60 pessoas)</strong> estiveram em pelo menos um evento. Além disso, 295 participantes responderam de forma estritamente anônima.
+              <strong>Não.</strong> O survey alcançou uma comunidade substancialmente externa aos eventos. Das 226 respostas identificadas (<strong>218 indivíduos únicos</strong> após desduplicação de 8 envios duplos), <strong>73,5% (166 respostas / 161 únicos = 73,85%)</strong> não participaram de nenhum evento, enquanto <strong>26,5% (60 respostas / 57 únicos = 26,15%)</strong> estiveram em pelo menos um evento. Dos 295 registros sem identificação, 276 foram encerrados nas perguntas-filtro iniciais e apenas 19 responderam de forma anônima até o fim.
             </p>
           </div>
           <div class="border-l-4 border-emerald-500 pl-4 space-y-1">
             <span class="text-xs font-bold uppercase text-emerald-600 tracking-wider">Pergunta 2</span>
             <h3 class="font-bold text-slate-800">Recorrência ou Renovação de profissionais?</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              <strong>Alta renovação e atração de novos profissionais.</strong> No segundo evento, <strong>89,1% dos participantes eram estreantes</strong> (344 de 386). A taxa de sobreposição direta entre ambos os eventos foi de apenas <strong>3,87%</strong> do universo total de 1.086 indivíduos únicos (42 pessoas).
+              <strong>Alta renovação e atração de novos profissionais.</strong> No segundo evento, <strong>89,64% dos participantes eram estreantes</strong> (346 de 386). A taxa de sobreposição exata (validada por CPF e livre de homônimos) entre ambos os eventos foi de apenas <strong>3,68%</strong> do universo total de 1.088 indivíduos únicos (<strong>40 pessoas</strong>).
             </p>
           </div>
           <div class="border-l-4 border-purple-500 pl-4 space-y-1">
@@ -286,7 +286,7 @@ html_content = f"""<!DOCTYPE html>
             <p class="text-sm text-slate-500">Análise longitudinal entre o Evento 1 (Políticas por Evidências) e o Evento 2 (Práticas em Avaliação)</p>
           </div>
           <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-semibold">
-            1.086 Indivíduos Únicos Analisados
+            1.088 Indivíduos Únicos Analisados
           </span>
         </div>
 
@@ -295,24 +295,24 @@ html_content = f"""<!DOCTYPE html>
             <div class="w-full max-w-xs h-64 relative">
               <canvas id="chartQ2"></canvas>
             </div>
-            <p class="text-xs text-slate-500 text-center mt-3">Composição do Evento 2: Renovação massiva</p>
+            <p class="text-xs text-slate-500 text-center mt-3">Composição do Evento 2: Renovação massiva (89,64%)</p>
           </div>
 
           <div class="lg:col-span-7">
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
               <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
                 <span class="text-xs font-bold uppercase text-emerald-700 tracking-wider">Taxa de Renovação</span>
-                <div class="text-3xl font-extrabold text-emerald-900 mt-1">89,12%</div>
+                <div class="text-3xl font-extrabold text-emerald-900 mt-1">89,64%</div>
                 <p class="text-xs text-emerald-700 mt-1">
-                  Dos 386 inscritos no Evento 2, <strong>344 eram participantes inéditos</strong> que nunca haviam estado no Evento 1.
+                  Dos 386 inscritos no Evento 2, <strong>346 eram participantes inéditos</strong> que nunca haviam estado no Evento 1.
                 </p>
               </div>
 
               <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
                 <span class="text-xs font-bold uppercase text-amber-700 tracking-wider">Taxa de Recorrência Global</span>
-                <div class="text-3xl font-extrabold text-amber-900 mt-1">3,87%</div>
+                <div class="text-3xl font-extrabold text-amber-900 mt-1">3,68%</div>
                 <p class="text-xs text-amber-700 mt-1">
-                  Apenas <strong>42 pessoas</strong> participaram de ambos os eventos, demonstrando públicos-alvo especializados distintos.
+                  Exatamente <strong>40 pessoas</strong> (validadas por CPF) participaram de ambos os eventos, demonstrando públicos especializados distintos.
                 </p>
               </div>
             </div>
@@ -339,23 +339,23 @@ html_content = f"""<!DOCTYPE html>
                   </tr>
                   <tr>
                     <td class="p-2.5 font-medium">Total de Indivíduos Únicos na Rede</td>
-                    <td class="p-2.5 text-center font-bold text-blue-600">1.086</td>
-                    <td class="p-2.5 text-center">Base Consolidada</td>
+                    <td class="p-2.5 text-center font-bold text-blue-600">1.088</td>
+                    <td class="p-2.5 text-center">Base Consolidada (742 + 386 - 40)</td>
                   </tr>
                   <tr class="bg-amber-50/50">
-                    <td class="p-2.5 font-semibold text-amber-900">Sobreposição de Participantes (Ambos os Eventos)</td>
-                    <td class="p-2.5 text-center font-bold text-amber-900">42</td>
-                    <td class="p-2.5 text-center font-bold text-amber-900">3,87% dos indivíduos únicos</td>
+                    <td class="p-2.5 font-semibold text-amber-900">Sobreposição Exata de Participantes (Ambos os Eventos - CPF)</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">40</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">3,68% dos indivíduos únicos</td>
                   </tr>
                   <tr class="bg-emerald-50/50">
                     <td class="p-2.5 font-semibold text-emerald-900">Novos Profissionais Atraídos no Evento 2</td>
-                    <td class="p-2.5 text-center font-bold text-emerald-900">344</td>
-                    <td class="p-2.5 text-center font-bold text-emerald-900">89,12% do Evento 2</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">346</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">89,64% do Evento 2</td>
                   </tr>
                   <tr>
                     <td class="p-2.5 font-medium">Taxa de Retenção do Evento 1 no Evento 2</td>
-                    <td class="p-2.5 text-center font-bold">42</td>
-                    <td class="p-2.5 text-center text-slate-600">5,66% do Evento 1</td>
+                    <td class="p-2.5 text-center font-bold">40</td>
+                    <td class="p-2.5 text-center text-slate-600">5,39% do Evento 1</td>
                   </tr>
                 </tbody>
               </table>
@@ -789,7 +789,7 @@ html_content = f"""<!DOCTYPE html>
     new Chart(document.getElementById('chartQ2'), {{
       type: 'doughnut',
       data: {{
-        labels: ['Novos Profissionais (89,1%)', 'Participantes Recorrentes (10,9%)'],
+        labels: ['Novos Profissionais (89,6%)', 'Participantes Recorrentes (10,4%)'],
         datasets: [{{
           data: [rawData.q2.e2_new, rawData.q2.overlap],
           backgroundColor: ['#059669', '#d97706'],

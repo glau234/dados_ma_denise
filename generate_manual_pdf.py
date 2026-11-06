@@ -233,7 +233,7 @@ html_content = """<!DOCTYPE html>
       </tbody>
     </table>
     <div class="alert-info">
-      <strong>Exemplo de Aplicação:</strong> Utilize para montar a capa ou primeiro slide de reuniões: "Comunidade de 1.086 indivíduos únicos, renovação de 89,1% no Evento 2 e 60,2% de liderança feminina".
+      <strong>Exemplo de Aplicação:</strong> Utilize para montar a capa ou primeiro slide de reuniões: "Comunidade de 1.088 indivíduos únicos, renovação de 89,6% no Evento 2 e 60,2% de liderança feminina".
     </div>
   </div>
 
@@ -280,10 +280,10 @@ html_content = """<!DOCTYPE html>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Taxa de Renovação no Evento 2 (%)</td><td><strong>89,12%</strong></td><td>(344 novos inscritos no E2 / 386 inscritos totais no E2) * 100</td></tr>
-        <tr><td>Taxa de Recorrência no Evento 2 (%)</td><td>10,88%</td><td>(42 pessoas que vieram do E1 / 386 inscritos totais no E2) * 100</td></tr>
-        <tr><td>Retenção do Evento 1 no Evento 2 (%)</td><td>5,66%</td><td>(42 pessoas / 742 inscritos totais no E1) * 100</td></tr>
-        <tr><td>Taxa de Recorrência Global (%)</td><td>3,87%</td><td>(42 sobrepostos / 1.086 indivíduos únicos da comunidade) * 100</td></tr>
+        <tr><td>Taxa de Renovação no Evento 2 (%)</td><td><strong>89,64%</strong></td><td>(346 novos inscritos no E2 / 386 inscritos totais no E2) * 100</td></tr>
+        <tr><td>Taxa de Recorrência no Evento 2 (%)</td><td>10,36%</td><td>(40 pessoas que vieram do E1 / 386 inscritos totais no E2) * 100</td></tr>
+        <tr><td>Retenção do Evento 1 no Evento 2 (%)</td><td>5,39%</td><td>(40 pessoas / 742 inscritos totais no E1) * 100</td></tr>
+        <tr><td>Taxa de Recorrência Global (%)</td><td>3,68%</td><td>(40 sobrepostos / 1.088 indivíduos únicos da comunidade) * 100</td></tr>
       </tbody>
     </table>
   </div>
@@ -332,7 +332,7 @@ html_content = """<!DOCTYPE html>
         </tr>
       </thead>
       <tbody>
-        <tr><td>Centro-Oeste (DF lidera com 45,4%)</td><td>559</td><td>49,56%</td><td>Público Federal</td><td>487</td><td>43,17%</td></tr>
+        <tr><td>Centro-Oeste (DF lidera com 45,4%)</td><td>560</td><td>49,65%</td><td>Público Federal</td><td>487</td><td>43,17%</td></tr>
         <tr><td>Sudeste (SP 11,0%, RJ 8,0%)</td><td>269</td><td>23,85%</td><td>Público Estadual</td><td>220</td><td>19,50%</td></tr>
         <tr><td>Nordeste (BA e CE)</td><td>138</td><td>12,23%</td><td>Outros / Academia</td><td>207</td><td>18,35%</td></tr>
         <tr><td>Sul (PR, RS, SC)</td><td>73</td><td>6,47%</td><td>Público Municipal</td><td>95</td><td>8,42%</td></tr>
