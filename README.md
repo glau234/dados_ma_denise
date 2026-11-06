@@ -48,6 +48,7 @@ Repositório com a análise estatística, econométrica e qualitativa integrada 
 | Arquivo | Descrição |
 | :--- | :--- |
 | **`Relatorio_Completo_Monitoramento_Avaliacao_2024.pdf`** | Relatório Técnico Oficial diagramado (8 páginas) com tabelas, testes $\chi^2$ e gráficos vetoriais. |
+| **`Relatorio_Metodologia_Ferramentas_Analise_2024.pdf`** | Relatório Técnico de Metodologia e Ferramentas (10 páginas) descrevendo todo o ecossistema computacional, fórmulas e algoritmos. |
 | **`Policy_Brief_Executivo_MA_2024.pdf`** | Policy Brief condensado de 2 páginas voltado para tomadores de decisão e dirigentes. |
 | **`Manual_Estrutura_Planilha_Excel_MA_2024.pdf`** | Manual do Usuário e Dicionário de Dados (3 páginas) da planilha Excel consolidada. |
 | **`Relatorio_Tabelas_Consolidadas_MA_2024.xlsx`** | Planilha Excel profissional estilizada com 9 abas (KPIs, Q1, Q2, ACM, Espacial, Clusters, Cruzamentos e Qualitativo). |
@@ -60,6 +61,7 @@ Repositório com a análise estatística, econométrica e qualitativa integrada 
 ## 🛠️ Scripts de Análise (Python)
 * `generate_analysis.py`: Processamento dos dados brutos, testes estatísticos, pareamento, ACM (prince) e clusterização (K-Means).
 * `generate_pdf_report.py`: Geração do relatório técnico oficial de 8 páginas via Playwright Chromium e Matplotlib.
+* `generate_methodology_pdf.py`: Geração do relatório técnico de metodologia e ferramentas (10 páginas).
 * `generate_policy_brief.py`: Geração do Policy Brief executivo de 2 páginas.
 * `generate_manual_pdf.py`: Geração do manual da planilha em PDF.
 * `build_excel_summary.py`: Montagem da planilha consolidada multi-abas e estilização visual corporativa.
