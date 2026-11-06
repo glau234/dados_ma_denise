@@ -48,7 +48,8 @@ Repositório com a análise estatística, econométrica e qualitativa integrada 
 | Arquivo | Descrição |
 | :--- | :--- |
 | **`Relatorio_Completo_Monitoramento_Avaliacao_2024.pdf`** | Relatório Técnico Oficial diagramado (8 páginas) com tabelas, testes $\chi^2$ e gráficos vetoriais. |
-| **`Relatorio_Metodologia_Ferramentas_Analise_2024.pdf`** | Relatório Técnico de Metodologia e Ferramentas (10 páginas) descrevendo todo o ecossistema computacional, fórmulas e algoritmos. |
+| **`Relatorio_Completo_Metodologia_Metricas_e_Ferramentas_2024.pdf`** | Memorial Metodológico, Catálogo Mestre de 28 Métricas, Fórmulas, Gráficos de Validação (ACM Scree Plot, WCSS/Silhueta K-Means, ANOVA F) e Ferramentas (16 páginas). |
+| **`Relatorio_Metodologia_Ferramentas_Analise_2024.pdf`** | Versão síntese do Relatório Técnico de Metodologia e Ferramentas. |
 | **`Policy_Brief_Executivo_MA_2024.pdf`** | Policy Brief condensado de 2 páginas voltado para tomadores de decisão e dirigentes. |
 | **`Manual_Estrutura_Planilha_Excel_MA_2024.pdf`** | Manual do Usuário e Dicionário de Dados (3 páginas) da planilha Excel consolidada. |
 | **`Relatorio_Tabelas_Consolidadas_MA_2024.xlsx`** | Planilha Excel profissional estilizada com 9 abas (KPIs, Q1, Q2, ACM, Espacial, Clusters, Cruzamentos e Qualitativo). |
