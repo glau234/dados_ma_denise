@@ -448,3 +448,4 @@ with sync_playwright() as p:
     browser.close()
 
 print(f"Manual em PDF gerado com sucesso em: {pdf_output_path}")
+

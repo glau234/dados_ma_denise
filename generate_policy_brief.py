@@ -385,3 +385,4 @@ if os.path.exists('policy_brief_temp.html'):
     os.remove('policy_brief_temp.html')
 
 print(f"Policy Brief Executivo de 2 Páginas gerado com sucesso em: {pdf_pb_path}")
+

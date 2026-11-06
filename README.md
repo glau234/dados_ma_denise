@@ -65,3 +65,4 @@ Repositório com a análise estatística, econométrica e qualitativa integrada 
 * `build_excel_summary.py`: Montagem da planilha consolidada multi-abas e estilização visual corporativa.
 * `build_presentation.py`: Construção automática dos slides PowerPoint (.pptx).
 * `build_html_dashboard.py`: Atualização do painel web interativo.
+
