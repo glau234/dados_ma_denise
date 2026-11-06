@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painel Analítico: Avaliação e Evidências em Políticas Públicas (2024)</title>
+  <title>Painel Analítico Integrado: Monitoramento, Avaliação e Evidências (2024)</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Chart.js CDN -->
@@ -18,6 +18,14 @@
       color: #1d4ed8;
       background-color: #eff6ff;
     }
+    .custom-scrollbar::-webkit-scrollbar {
+      height: 6px;
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
   </style>
 </head>
 <body class="bg-slate-50 text-slate-800 antialiased min-h-screen flex flex-col">
@@ -28,19 +36,23 @@
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div>
           <div class="flex items-center gap-2">
-            <span class="bg-blue-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Relatório Oficial de Pesquisa</span>
+            <span class="bg-emerald-500 text-white text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Painel Oficial Consolidado</span>
+            <span class="bg-blue-600/80 text-blue-100 text-xs px-2 py-0.5 rounded-full font-medium">Insights 100% Aplicados</span>
             <span class="text-blue-200 text-xs">Ano Base: 2024</span>
           </div>
           <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight mt-1 text-white">
             Redes de Monitoramento, Avaliação e Evidências em Políticas Públicas
           </h1>
           <p class="text-sm text-slate-300">
-            Análise integrada entre inscritos em eventos de evidências e o survey nacional de escuta
+            Inteligência de dados integrando participantes de eventos nacionais e o survey de escuta profissional
           </p>
         </div>
         <div class="flex items-center gap-2">
+          <a href="Relatorio_Completo_Monitoramento_Avaliacao_2024.pdf" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 hover:bg-blue-500 text-white text-xs font-medium rounded-lg transition shadow-sm">
+            📄 Relatório PDF
+          </a>
           <button onclick="window.print()" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-medium rounded-lg border border-slate-700 transition shadow-sm">
-            🖨️ Imprimir / Salvar PDF
+            🖨️ Imprimir Painel
           </button>
         </div>
       </div>
@@ -51,7 +63,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-2 pt-6 w-full">
     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 sm:gap-4">
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Inscrições em Eventos</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Inscrições Eventos</div>
         <div class="text-2xl font-bold text-slate-900 mt-1">1.128</div>
         <div class="text-xs text-blue-600 mt-0.5 font-medium">1.086 indivíduos únicos</div>
       </div>
@@ -66,26 +78,26 @@
         <div class="text-xs text-emerald-700 mt-0.5 font-medium">Novos no 2º evento</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recorrência nos Eventos</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Recorrência Geral</div>
         <div class="text-2xl font-bold text-amber-600 mt-1">3,87%</div>
-        <div class="text-xs text-amber-700 mt-0.5">Apenas 42 pessoas em ambos</div>
+        <div class="text-xs text-amber-700 mt-0.5">42 pessoas em ambos</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Maioria Feminina</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Liderança Feminina</div>
         <div class="text-2xl font-bold text-indigo-600 mt-1">60,2%</div>
-        <div class="text-xs text-slate-500 mt-0.5">63,0% no Survey</div>
+        <div class="text-xs text-indigo-700 mt-0.5 font-medium">75% no Cluster de ATS</div>
       </div>
       <div class="bg-white p-4 rounded-xl shadow-sm border border-slate-200/80 hover:shadow transition">
-        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Comunicação Decisores</div>
-        <div class="text-2xl font-bold text-purple-600 mt-1">73,5%</div>
-        <div class="text-xs text-rose-500 mt-0.5 font-medium">33,1% p/ público geral</div>
+        <div class="text-xs font-semibold text-slate-500 uppercase tracking-wider">Interiorização Online</div>
+        <div class="text-2xl font-bold text-purple-600 mt-1">86,9%</div>
+        <div class="text-xs text-purple-700 mt-0.5 font-medium">Participantes fora do DF</div>
       </div>
     </div>
   </div>
 
   <!-- Navegação por Abas -->
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 w-full">
-    <div class="flex overflow-x-auto border-b border-slate-200 gap-1 bg-white p-1 rounded-xl shadow-sm border">
+    <div class="flex overflow-x-auto border-b border-slate-200 gap-1 bg-white p-1 rounded-xl shadow-sm border custom-scrollbar">
       <button onclick="switchTab('tab-visao-geral')" id="btn-tab-visao-geral" class="tab-btn active px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
         📊 Visão Geral Executiva
       </button>
@@ -96,7 +108,7 @@
         🔄 P2: Recorrência vs Renovação
       </button>
       <button onclick="switchTab('tab-q3')" id="btn-tab-q3" class="tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
-        🎓 P3: Análise de Correspondência (ACM)
+        🎓 P3: Correspondência (ACM)
       </button>
       <button onclick="switchTab('tab-q4')" id="btn-tab-q4" class="tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
         🗺️ P4: Distribuição Espacial e Setorial
@@ -104,8 +116,8 @@
       <button onclick="switchTab('tab-q5')" id="btn-tab-q5" class="tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
         👥 P5: Análise de Clusters
       </button>
-      <button onclick="switchTab('tab-insights')" id="btn-tab-insights" class="tab-btn px-4 py-2.5 text-xs sm:text-sm font-semibold rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
-        💡 Insights Extras para Validação
+      <button onclick="switchTab('tab-insights')" id="btn-tab-insights" class="tab-btn px-4 py-2.5 text-xs sm:text-sm font-bold text-indigo-700 bg-indigo-50/50 rounded-lg border-b-2 border-transparent transition whitespace-nowrap">
+        💡 Insights Aplicados e Cruzamentos
       </button>
     </div>
   </div>
@@ -117,7 +129,7 @@
     <section id="tab-visao-geral" class="tab-content space-y-6">
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <h2 class="text-xl font-bold text-slate-900 border-b pb-4 mb-4 flex items-center gap-2">
-          <span>📋</span> Sumário Executivo das 5 Perguntas de Pesquisa
+          <span>📋</span> Sumário Executivo das 5 Perguntas e Diretrizes Estratégicas
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div class="border-l-4 border-blue-500 pl-4 space-y-1">
@@ -138,25 +150,40 @@
             <span class="text-xs font-bold uppercase text-purple-600 tracking-wider">Pergunta 3</span>
             <h3 class="font-bold text-slate-800">Relação Tempo, Titulação e Formação (ACM)</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              A Análise de Correspondência Múltipla revelou dois polos contrastantes: o <strong>Polo Acadêmico-Sênior</strong> (Doutores e Pós-doutores, >10 a 20 anos de experiência, atuando como Pesquisadores) vs o <strong>Polo de Gestão/Prática Aplicada</strong> (Especialistas e Mestres, tempo de atuação mais recente de até 5 anos, na gestão e ponta). Associação altamente significante (p &lt; 0,001).
+              A Análise de Correspondência Múltipla revelou dois polos contrastantes: o <strong>Polo Acadêmico-Sênior</strong> (Doutores e Pós-doutores, >10 a 20 anos de experiência, atuando como Pesquisadores) vs o <strong>Polo de Gestão/Prática Aplicada</strong> (Especialistas e Mestres, tempo de atuação mais recente de até 5 anos, na gestão e ponta). A gerência atua isolada no topo (+2,75).
             </p>
           </div>
           <div class="border-l-4 border-amber-500 pl-4 space-y-1">
             <span class="text-xs font-bold uppercase text-amber-600 tracking-wider">Pergunta 4</span>
             <h3 class="font-bold text-slate-800">Distribuição Espacial, Esfera e Área Setorial</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              Forte concentração geográfica no <strong>Distrito Federal (~45%)</strong> e na esfera <strong>Federal (43,2%)</strong>, seguida do Sudeste (23,9%) e Nordeste (12,2%). Na distribuição setorial, quase metade é da <strong>Saúde (49,4%)</strong>, havendo nítida correlação: esferas municipais e estaduais são majoritariamente da Saúde (67% e 56%), enquanto a esfera federal abriga maior diversidade de políticas públicas.
+              Forte concentração geográfica no <strong>Distrito Federal (~45%)</strong> e na esfera <strong>Federal (43,2%)</strong>, seguida do Sudeste (23,9%) e Nordeste (12,2%). Na distribuição setorial, quase metade é da <strong>Saúde (49,4%)</strong>: municípios e estados são dominados pela Saúde (67% e 56%), enquanto a esfera federal concentra maior diversidade de políticas públicas.
             </p>
           </div>
           <div class="border-l-4 border-rose-500 pl-4 space-y-1 md:col-span-2">
             <span class="text-xs font-bold uppercase text-rose-600 tracking-wider">Pergunta 5</span>
             <h3 class="font-bold text-slate-800">Perfis Profissionais segundo Atribuições Cotidianas (Clusters)</h3>
             <p class="text-sm text-slate-600 leading-relaxed">
-              O modelo de clustering identificou 3 perfis funcionais bem estruturados no campo de M&A:
-              <br>• <strong>Cluster 1 (13,1%):</strong> <em>Especialistas em ATS e Síntese de Evidências</em> (100% atuam com ATS, 69% com síntese, grandes equipes de 8,7 pessoas);
-              <br>• <strong>Cluster 2 (37,1%):</strong> <em>Avaliadores Ocasionais / Prática Periférica</em> (M&A como atividade secundária, menor complexidade metodológica e pouca disseminação);
-              <br>• <strong>Cluster 3 (49,8%):</strong> <em>Núcleo Multimetodológico de Alta Intensidade</em> (75% dedicação principal, 94% projetos ativos, múltiplos métodos estatísticos e participativos, 90% divulgam para decisores).
+              O modelo K-Means identificou 3 grupos consolidados: <strong>Cluster 1 (13,1%)</strong>: Especialistas em ATS e Síntese em grandes equipes (8,7 membros), altamente internacionalizados; <strong>Cluster 2 (37,1%)</strong>: Avaliadores Ocasionais / Prática Periférica, onde M&A é atividade secundária; <strong>Cluster 3 (49,8%)</strong>: Núcleo Multimetodológico Ativo (75% dedicação principal, múltiplos métodos quali-quanti e 90% dialogam com decisores).
             </p>
+          </div>
+        </div>
+
+        <div class="mt-8 pt-6 border-t border-slate-200">
+          <h3 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-3">Recomendações Estratégicas para o Programa</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+            <div class="p-4 rounded-xl bg-blue-50 border border-blue-200 text-xs text-blue-900">
+              <span class="font-bold block mb-1">1. Consolidação da Rede Híbrida</span>
+              O formato online garantiu que 86,9% dos profissionais de outros estados participassem. O modelo híbrido é imperativo para a equidade territorial.
+            </div>
+            <div class="p-4 rounded-xl bg-indigo-50 border border-indigo-200 text-xs text-indigo-900">
+              <span class="font-bold block mb-1">2. Plano de Diversidade e Carreira</span>
+              Combater o afunilamento racial nas posições de doutorado e chefia (71,3% brancos no núcleo duro) mediante bolsas e mentorias afirmativas.
+            </div>
+            <div class="p-4 rounded-xl bg-purple-50 border border-purple-200 text-xs text-purple-900">
+              <span class="font-bold block mb-1">3. Tradução do Conhecimento</span>
+              Superar o abismo comunicacional (apenas 33,1% divulgam para a sociedade) com oficinas de linguagem cidadã, infográficos e ciência aberta.
+            </div>
           </div>
         </div>
       </div>
@@ -167,65 +194,76 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-2">
           <div>
-            <h2 class="text-xl font-bold text-slate-900">Pergunta 1: As pessoas que responderam ao survey são as mesmas dos eventos?</h2>
-            <p class="text-sm text-slate-500">Cruzamento determinístico por CPF, E-mail normalizado e Nome completo</p>
+            <h2 class="text-xl font-bold text-slate-900">Pergunta 1: Sobreposição entre Respondentes do Survey e Inscritos nos Eventos</h2>
+            <p class="text-sm text-slate-500">Pareamento determinístico em três camadas: CPF, e-mail institucional/pessoal e nome completo normalizado</p>
           </div>
           <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full font-semibold">
-            N = 521 Survey | 1.128 Inscrições em Eventos
+            N = 521 Survey (226 Identificados + 295 Anônimos)
           </span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-5 space-y-4">
-            <div class="bg-slate-50 rounded-xl p-5 border border-slate-200 space-y-3">
-              <h3 class="font-bold text-slate-800 text-sm uppercase tracking-wider">Estrutura de Identificação da Amostra</h3>
-              <div class="flex justify-between items-center text-sm border-b pb-2">
-                <span class="text-slate-600">Total de Respondentes no Survey:</span>
-                <span class="font-bold text-slate-900">521 (100%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b pb-2">
-                <span class="text-slate-600">Respostas Anônimas (sem identificação):</span>
-                <span class="font-bold text-slate-500">295 (56,6%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm">
-                <span class="text-slate-600">Respondentes Identificados (contatos válidos):</span>
-                <span class="font-bold text-blue-600">226 (43,4%)</span>
-              </div>
-            </div>
-
-            <div class="bg-blue-50/70 rounded-xl p-5 border border-blue-200 space-y-3">
-              <h3 class="font-bold text-blue-900 text-sm uppercase tracking-wider">Cruzamento dos 226 Identificados</h3>
-              <div class="flex justify-between items-center text-sm border-b border-blue-200/60 pb-2">
-                <span class="text-slate-700">Presentes no Evento 1 (Evidências):</span>
-                <span class="font-bold text-slate-900">47 (20,8%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-blue-200/60 pb-2">
-                <span class="text-slate-700">Presentes no Evento 2 (Práticas):</span>
-                <span class="font-bold text-slate-900">17 (7,5%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-blue-200/60 pb-2">
-                <span class="text-slate-700">Presentes em AMBOS os eventos:</span>
-                <span class="font-bold text-slate-900">4 (1,8%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-blue-200/60 pb-2">
-                <span class="text-slate-900 font-semibold">Total com Presença em Evento(s):</span>
-                <span class="font-bold text-emerald-700">60 (26,5%)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm pt-1">
-                <span class="text-slate-900 font-semibold">Público EXTERNO aos Eventos:</span>
-                <span class="font-bold text-rose-600">166 (73,5%)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-7 bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
-            <h4 class="text-sm font-semibold text-slate-700 mb-3 text-center">Distribuição de Correspondência do Público do Survey</h4>
-            <div class="h-72">
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="w-full max-w-xs h-64 relative">
               <canvas id="chartQ1"></canvas>
             </div>
-            <p class="text-xs text-slate-500 text-center mt-3">
-              💡 <strong>Conclusão Central:</strong> As pessoas do survey <strong>não são as mesmas</strong> dos eventos em sua maioria. O survey funcionou como um canal aberto de escuta setorial mais amplo, mobilizando 166 profissionais não participantes dos eventos.
-            </p>
+            <p class="text-xs text-slate-500 text-center mt-3">Distribuição dos 226 respondentes identificados do Survey</p>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border border-slate-200 rounded-lg overflow-hidden">
+                <thead class="bg-slate-100 text-slate-700 font-semibold uppercase tracking-wider">
+                  <tr>
+                    <th class="p-3">Segmento / Categoria de Cruzamento</th>
+                    <th class="p-3 text-center">Nº Pessoas</th>
+                    <th class="p-3 text-center">% Identificados</th>
+                    <th class="p-3 text-center">% Universo Total Survey</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-medium text-slate-900">Externos aos Eventos (Apenas Survey)</td>
+                    <td class="p-3 text-center font-bold text-rose-600">166</td>
+                    <td class="p-3 text-center font-bold text-rose-600">73,45%</td>
+                    <td class="p-3 text-center text-slate-600">31,86%</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-medium text-slate-900">Participantes do Evento 1 (Políticas por Evidências)</td>
+                    <td class="p-3 text-center font-semibold text-slate-800">47</td>
+                    <td class="p-3 text-center text-slate-600">20,80%</td>
+                    <td class="p-3 text-center text-slate-600">9,02%</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-medium text-slate-900">Participantes do Evento 2 (Práticas em Avaliação)</td>
+                    <td class="p-3 text-center font-semibold text-slate-800">17</td>
+                    <td class="p-3 text-center text-slate-600">7,52%</td>
+                    <td class="p-3 text-center text-slate-600">3,26%</td>
+                  </tr>
+                  <tr class="hover:bg-slate-50">
+                    <td class="p-3 font-medium text-slate-900">Presentes em Ambos os Eventos (E1 e E2)</td>
+                    <td class="p-3 text-center font-semibold text-slate-800">4</td>
+                    <td class="p-3 text-center text-slate-600">1,77%</td>
+                    <td class="p-3 text-center text-slate-600">0,77%</td>
+                  </tr>
+                  <tr class="bg-blue-50/50 font-semibold">
+                    <td class="p-3 text-blue-900">Subtotal com Presença em Eventos</td>
+                    <td class="p-3 text-center text-blue-900 font-bold">60</td>
+                    <td class="p-3 text-center text-blue-900 font-bold">26,55%</td>
+                    <td class="p-3 text-center text-blue-900">11,52%</td>
+                  </tr>
+                  <tr class="bg-slate-50 text-slate-500">
+                    <td class="p-3 italic">Respondentes Anônimos (Sem dados nominais informados)</td>
+                    <td class="p-3 text-center font-semibold">295</td>
+                    <td class="p-3 text-center">-</td>
+                    <td class="p-3 text-center font-semibold">56,62%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mt-4 p-3 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-900 leading-relaxed">
+              <strong>Conclusão Técnica:</strong> As pessoas que responderam ao survey <strong>não são as mesmas</strong> que participaram dos eventos (quase 3/4 dos identificados são externos). O formulário de escuta funcionou como um canal democrático de ampla capilaridade setorial.
+            </div>
           </div>
         </div>
       </div>
@@ -236,62 +274,84 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-2">
           <div>
-            <h2 class="text-xl font-bold text-slate-900">Pergunta 2: Recorrência ou Renovação de Profissionais nos Eventos?</h2>
-            <p class="text-sm text-slate-500">Comparação longitudinal de participação entre o Evento 1 e o Evento 2 (2024)</p>
+            <h2 class="text-xl font-bold text-slate-900">Pergunta 2: Recorrência vs. Renovação e Atração de Novos Profissionais</h2>
+            <p class="text-sm text-slate-500">Análise longitudinal entre o Evento 1 (Políticas por Evidências) e o Evento 2 (Práticas em Avaliação)</p>
           </div>
           <span class="inline-block bg-emerald-100 text-emerald-800 text-xs px-3 py-1 rounded-full font-semibold">
-            1.086 Indivíduos Únicos
+            1.086 Indivíduos Únicos Analisados
           </span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          <div class="lg:col-span-6 space-y-4">
-            <div class="grid grid-cols-2 gap-4">
-              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                <div class="text-xs text-slate-500 font-bold uppercase">Evento 1 (Evidências)</div>
-                <div class="text-2xl font-extrabold text-slate-900 mt-1">742</div>
-                <div class="text-xs text-slate-500 mt-1">Inscritos Totais</div>
-              </div>
-              <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                <div class="text-xs text-slate-500 font-bold uppercase">Evento 2 (Práticas)</div>
-                <div class="text-2xl font-extrabold text-slate-900 mt-1">386</div>
-                <div class="text-xs text-slate-500 mt-1">Inscritos Totais</div>
-              </div>
-            </div>
-
-            <div class="bg-emerald-50/70 rounded-xl p-5 border border-emerald-200 space-y-3">
-              <h3 class="font-bold text-emerald-950 text-sm uppercase tracking-wider">Indicadores de Fidelidade e Atração</h3>
-              <div class="flex justify-between items-center text-sm border-b border-emerald-200/60 pb-2">
-                <span class="text-slate-700">Pessoas presentes em AMBOS os eventos:</span>
-                <span class="font-bold text-slate-900">42 indivíduos</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-emerald-200/60 pb-2">
-                <span class="text-slate-700">Taxa de Recorrência no Evento 2:</span>
-                <span class="font-bold text-amber-700">10.88%</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-emerald-200/60 pb-2">
-                <span class="text-slate-700">Taxa de Renovação no Evento 2:</span>
-                <span class="font-bold text-emerald-700 text-base">89.12%</span>
-              </div>
-              <div class="flex justify-between items-center text-sm border-b border-emerald-200/60 pb-2">
-                <span class="text-slate-700">Retenção do Evento 1 no Evento 2:</span>
-                <span class="font-bold text-slate-900">5.66% (42 de 742)</span>
-              </div>
-              <div class="flex justify-between items-center text-sm pt-1">
-                <span class="text-slate-700 font-medium">Recorrência sobre a Comunidade Total:</span>
-                <span class="font-bold text-slate-900">3.87% (42 de 1.086)</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="lg:col-span-6 bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
-            <h4 class="text-sm font-semibold text-slate-700 mb-3 text-center">Composição do Público no Evento 2 (Práticas em Avaliação)</h4>
-            <div class="h-72">
+          <div class="lg:col-span-5 flex flex-col items-center">
+            <div class="w-full max-w-xs h-64 relative">
               <canvas id="chartQ2"></canvas>
             </div>
-            <p class="text-xs text-slate-500 text-center mt-3">
-              💡 <strong>Diagnóstico:</strong> Há uma <strong>expressiva capacidade de atração de novos profissionais</strong> (renovação de ~90%), indicando que a temática prática alcançou novos públicos e setores que não haviam aderido ao evento anterior.
-            </p>
+            <p class="text-xs text-slate-500 text-center mt-3">Composição do Evento 2: Renovação massiva</p>
+          </div>
+
+          <div class="lg:col-span-7">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-xl">
+                <span class="text-xs font-bold uppercase text-emerald-700 tracking-wider">Taxa de Renovação</span>
+                <div class="text-3xl font-extrabold text-emerald-900 mt-1">89,12%</div>
+                <p class="text-xs text-emerald-700 mt-1">
+                  Dos 386 inscritos no Evento 2, <strong>344 eram participantes inéditos</strong> que nunca haviam estado no Evento 1.
+                </p>
+              </div>
+
+              <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl">
+                <span class="text-xs font-bold uppercase text-amber-700 tracking-wider">Taxa de Recorrência Global</span>
+                <div class="text-3xl font-extrabold text-amber-900 mt-1">3,87%</div>
+                <p class="text-xs text-amber-700 mt-1">
+                  Apenas <strong>42 pessoas</strong> participaram de ambos os eventos, demonstrando públicos-alvo especializados distintos.
+                </p>
+              </div>
+            </div>
+
+            <div class="overflow-x-auto">
+              <table class="w-full text-left text-xs border border-slate-200 rounded-lg overflow-hidden">
+                <thead class="bg-slate-100 text-slate-700 font-semibold uppercase tracking-wider">
+                  <tr>
+                    <th class="p-2.5">Indicador Estrutural</th>
+                    <th class="p-2.5 text-center">Frequência</th>
+                    <th class="p-2.5 text-center">Proporção Referência</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-slate-200">
+                  <tr>
+                    <td class="p-2.5 font-medium">Inscritos Totais no Evento 1</td>
+                    <td class="p-2.5 text-center font-bold">742</td>
+                    <td class="p-2.5 text-center">100,0%</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-medium">Inscritos Totais no Evento 2</td>
+                    <td class="p-2.5 text-center font-bold">386</td>
+                    <td class="p-2.5 text-center">100,0%</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-medium">Total de Indivíduos Únicos na Rede</td>
+                    <td class="p-2.5 text-center font-bold text-blue-600">1.086</td>
+                    <td class="p-2.5 text-center">Base Consolidada</td>
+                  </tr>
+                  <tr class="bg-amber-50/50">
+                    <td class="p-2.5 font-semibold text-amber-900">Sobreposição de Participantes (Ambos os Eventos)</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">42</td>
+                    <td class="p-2.5 text-center font-bold text-amber-900">3,87% dos indivíduos únicos</td>
+                  </tr>
+                  <tr class="bg-emerald-50/50">
+                    <td class="p-2.5 font-semibold text-emerald-900">Novos Profissionais Atraídos no Evento 2</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">344</td>
+                    <td class="p-2.5 text-center font-bold text-emerald-900">89,12% do Evento 2</td>
+                  </tr>
+                  <tr>
+                    <td class="p-2.5 font-medium">Taxa de Retenção do Evento 1 no Evento 2</td>
+                    <td class="p-2.5 text-center font-bold">42</td>
+                    <td class="p-2.5 text-center text-slate-600">5,66% do Evento 1</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
@@ -302,56 +362,53 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-2">
           <div>
-            <h2 class="text-xl font-bold text-slate-900">Pergunta 3: Relação Tempo de Atuação, Titulação e Formação</h2>
-            <p class="text-sm text-slate-500">Análise de Correspondência Múltipla (ACM / MCA) e Testes de Associação Qui-Quadrado</p>
+            <h2 class="text-xl font-bold text-slate-900">Pergunta 3: Relação entre Tempo de Atuação, Titulação e Formação Profissional</h2>
+            <p class="text-sm text-slate-500">Análise de Correspondência Múltipla (ACM) e Testes de Associação Qui-Quadrado (χ²)</p>
           </div>
           <span class="inline-block bg-purple-100 text-purple-800 text-xs px-3 py-1 rounded-full font-semibold">
-            Inércia Total Explicada: 26.59% (2D)
+            N = 243 | Inércia Acumulada = 26,59%
           </span>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          <div class="lg:col-span-7 bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
-            <h4 class="text-sm font-semibold text-slate-700 mb-2 text-center">Mapa Perceptual 2D: Coordenadas das Categorias</h4>
-            <div class="h-96">
+          <div class="lg:col-span-8 bg-white p-4 rounded-xl border border-slate-100 shadow-inner">
+            <h4 class="text-sm font-semibold text-slate-700 mb-2 text-center">Mapa Fatorial da ACM (Dimensão 1 vs. Dimensão 2)</h4>
+            <div class="h-96 w-full">
               <canvas id="chartMCA"></canvas>
             </div>
-            <div class="flex justify-center gap-4 text-xs mt-3">
-              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-blue-600 inline-block"></span> Tempo de Atuação</span>
-              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-purple-600 inline-block"></span> Titulação Acadêmica</span>
-              <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded-full bg-amber-500 inline-block"></span> Função Profissional</span>
-            </div>
+            <p class="text-xs text-slate-400 text-center mt-2">Dimensão 1 (15,07% inércia) | Dimensão 2 (11,52% inércia)</p>
           </div>
 
-          <div class="lg:col-span-5 space-y-4">
-            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 space-y-3">
-              <h3 class="font-bold text-slate-900 text-sm uppercase tracking-wider">Testes de Independência Qui-Quadrado (χ²)</h3>
-              <div class="text-xs space-y-2">
-                <div class="p-2.5 bg-white rounded border border-slate-200">
-                  <div class="font-bold text-slate-800">Titulação x Função Profissional</div>
-                  <div class="text-slate-600">χ² = 70.06 | p-valor = 3.1218e-10 | gl = 12</div>
-                  <div class="text-emerald-700 font-semibold mt-0.5">Altamente significante (p &lt; 0,001)</div>
-                </div>
-                <div class="p-2.5 bg-white rounded border border-slate-200">
-                  <div class="font-bold text-slate-800">Tempo de Atuação x Titulação</div>
-                  <div class="text-slate-600">χ² = 46.02 | p-valor = 0.0001 | gl = 16</div>
-                  <div class="text-emerald-700 font-semibold mt-0.5">Altamente significante (p &lt; 0,001)</div>
-                </div>
-                <div class="p-2.5 bg-white rounded border border-slate-200">
-                  <div class="font-bold text-slate-800">Tempo de Atuação x Função</div>
-                  <div class="text-slate-600">χ² = 17.86 | p-valor = 0.1201 | gl = 12</div>
-                  <div class="text-slate-500 font-medium mt-0.5">Sem significância isolada (p = 0,12)</div>
-                </div>
+          <div class="lg:col-span-4 space-y-4">
+            <div class="bg-slate-50 p-4 rounded-xl border border-slate-200 text-xs space-y-2">
+              <h5 class="font-bold text-slate-800 text-sm">Testes Estatísticos de Associação</h5>
+              <div class="p-2.5 bg-white rounded border border-slate-200">
+                <span class="font-bold block text-blue-900">Titulação × Função Profissional</span>
+                <span class="text-slate-600 block">χ² = 70,06 | gl = 12</span>
+                <span class="text-emerald-600 font-bold">p &lt; 0,0001 (Altamente Significante)</span>
+              </div>
+              <div class="p-2.5 bg-white rounded border border-slate-200">
+                <span class="font-bold block text-blue-900">Tempo de Atuação × Titulação</span>
+                <span class="text-slate-600 block">χ² = 46,02 | gl = 16</span>
+                <span class="text-emerald-600 font-bold">p = 0,0001 (Altamente Significante)</span>
+              </div>
+              <div class="p-2.5 bg-white rounded border border-slate-200">
+                <span class="font-bold block text-blue-900">Tempo de Atuação × Função</span>
+                <span class="text-slate-600 block">χ² = 17,86 | gl = 12</span>
+                <span class="text-amber-600 font-bold">p = 0,1201 (Não significante a 5%)</span>
               </div>
             </div>
 
-            <div class="bg-purple-50/70 p-4 rounded-xl border border-purple-200 text-xs text-slate-700 leading-relaxed space-y-2">
-              <h4 class="font-bold text-purple-950 uppercase tracking-wider text-xs">Interpretação dos Eixos:</h4>
+            <div class="bg-purple-50 p-4 rounded-xl border border-purple-200 text-xs text-purple-900 leading-relaxed space-y-2">
+              <h5 class="font-bold text-sm">Estrutura Bipolar Revelada</h5>
               <p>
-                <strong>Dimensão 1 (15,07% da inércia):</strong> Oposição entre o <em>Polo Acadêmico-Sênior</em> (Doutorado, Pós-doutorado, >10 anos, Pesquisador no lado negativo) e o <em>Polo Gestão/Prática Operacional</em> (Especialização, Graduação, até 5 anos de carreira, na Gestão e Prática no lado positivo).
+                <strong>Polo Negativo Dim 1 (Acadêmico-Sênior):</strong> Doutores (-0,49), Pós-doutores (-1,17), >10 a 20 anos (-0,73) e Pesquisadores (-0,76).
               </p>
               <p>
-                <strong>Dimensão 2 (11,52% da inércia):</strong> Diferencia os <em>Gerentes e Líderes de Equipe</em> (no topo do eixo vertical) em relação aos técnicos executores e à base operacional.
+                <strong>Polo Positivo Dim 1 (Governamental-Operacional):</strong> Especialistas (+1,11), Mestres (+0,69), até 5 anos de carreira e Gestores/Assessores Técnicos (+0,60).
+              </p>
+              <p>
+                <strong>Dimensão 2 (Isolamento da Liderança):</strong> Gerentes e Coordenadores projetam-se no topo (+2,75), separados das rotinas de pesquisa e técnica operacional.
               </p>
             </div>
           </div>
@@ -364,68 +421,85 @@
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-2">
           <div>
-            <h2 class="text-xl font-bold text-slate-900">Pergunta 4: Distribuição Espacial, Esfera e Área Setorial</h2>
-            <p class="text-sm text-slate-500">Mapeamento federativo, esferas de governo e áreas setoriais de políticas públicas</p>
+            <h2 class="text-xl font-bold text-slate-900">Pergunta 4: Distribuição Espacial, Esferas Governamentais e Áreas Setoriais</h2>
+            <p class="text-sm text-slate-500">Mapeamento geográfico das UFs, esferas de governo e prevalência setorial da Saúde</p>
           </div>
           <span class="inline-block bg-amber-100 text-amber-800 text-xs px-3 py-1 rounded-full font-semibold">
-            1.128 Inscrições em Eventos
+            N = 1.128 Inscrições Totais
           </span>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h4 class="text-xs font-bold uppercase text-slate-600 mb-3 text-center">Distribuição por Grande Região</h4>
-            <div class="h-56">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center">
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Grandes Regiões</h4>
+            <div class="w-full h-56">
               <canvas id="chartRegioes"></canvas>
             </div>
           </div>
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h4 class="text-xs font-bold uppercase text-slate-600 mb-3 text-center">Esfera de Atuação Declarada</h4>
-            <div class="h-56">
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center">
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Esferas de Atuação</h4>
+            <div class="w-full h-56">
               <canvas id="chartEsferas"></canvas>
             </div>
           </div>
-          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-            <h4 class="text-xs font-bold uppercase text-slate-600 mb-3 text-center">Proporção Saúde vs Não-Saúde</h4>
-            <div class="h-56">
+          <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm flex flex-col items-center">
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">Prevalência Setorial: Saúde</h4>
+            <div class="w-full h-56">
               <canvas id="chartSaude"></canvas>
             </div>
           </div>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white p-5 rounded-xl border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-3">Top Unidades Federativas de Origem (Eventos)</h4>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <h4 class="font-bold text-slate-800 text-sm mb-3">Ranking das 8 Maiores Unidades Federativas (Inscrições)</h4>
             <div class="overflow-x-auto">
-              <table class="w-full text-xs text-left text-slate-600">
-                <thead class="bg-slate-100 uppercase text-slate-700">
-                  <tr>
-                    <th class="p-2">UF</th>
-                    <th class="p-2">Inscrições</th>
-                    <th class="p-2">% do Total</th>
-                  </tr>
+              <table class="w-full text-xs text-left">
+                <thead class="text-slate-500 uppercase border-b">
+                  <tr><th class="p-2">UF</th><th class="p-2 text-center">Inscrições</th><th class="p-2 text-center">% Total</th></tr>
                 </thead>
                 <tbody class="divide-y divide-slate-100">
-                  <tr><td class='p-2 font-bold text-slate-800'>DF</td><td class='p-2'>512</td><td class='p-2'>45.4%</td></tr><tr><td class='p-2 font-bold text-slate-800'>SP</td><td class='p-2'>124</td><td class='p-2'>11.0%</td></tr><tr><td class='p-2 font-bold text-slate-800'>RJ</td><td class='p-2'>90</td><td class='p-2'>8.0%</td></tr><tr><td class='p-2 font-bold text-slate-800'>BA</td><td class='p-2'>43</td><td class='p-2'>3.8%</td></tr><tr><td class='p-2 font-bold text-slate-800'>MG</td><td class='p-2'>40</td><td class='p-2'>3.5%</td></tr><tr><td class='p-2 font-bold text-slate-800'>PR</td><td class='p-2'>30</td><td class='p-2'>2.7%</td></tr><tr><td class='p-2 font-bold text-slate-800'>GO</td><td class='p-2'>30</td><td class='p-2'>2.7%</td></tr><tr><td class='p-2 font-bold text-slate-800'>CE</td><td class='p-2'>25</td><td class='p-2'>2.2%</td></tr>
+                  <tr><td class='p-2 font-semibold text-slate-900'>DF</td><td class='p-2 text-center font-bold text-blue-600'>512</td><td class='p-2 text-center text-slate-600'>45.4%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>SP</td><td class='p-2 text-center font-bold text-blue-600'>124</td><td class='p-2 text-center text-slate-600'>11.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>RJ</td><td class='p-2 text-center font-bold text-blue-600'>90</td><td class='p-2 text-center text-slate-600'>8.0%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>BA</td><td class='p-2 text-center font-bold text-blue-600'>43</td><td class='p-2 text-center text-slate-600'>3.8%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>MG</td><td class='p-2 text-center font-bold text-blue-600'>40</td><td class='p-2 text-center text-slate-600'>3.5%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>PR</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>GO</td><td class='p-2 text-center font-bold text-blue-600'>30</td><td class='p-2 text-center text-slate-600'>2.7%</td></tr><tr><td class='p-2 font-semibold text-slate-900'>CE</td><td class='p-2 text-center font-bold text-blue-600'>25</td><td class='p-2 text-center text-slate-600'>2.2%</td></tr>
                 </tbody>
               </table>
             </div>
           </div>
 
-          <div class="bg-white p-5 rounded-xl border border-slate-200">
-            <h4 class="font-bold text-slate-900 text-sm mb-3">Áreas Setoriais Temáticas no Survey</h4>
-            <div class="overflow-x-auto">
-              <table class="w-full text-xs text-left text-slate-600">
-                <thead class="bg-slate-100 uppercase text-slate-700">
-                  <tr>
-                    <th class="p-2">Temática de Política Pública</th>
-                    <th class="p-2">Menções</th>
-                  </tr>
-                </thead>
-                <tbody class="divide-y divide-slate-100">
-                  <tr><td class='p-2 font-semibold text-slate-800'>Saúde</td><td class='p-2 font-bold text-blue-600'>134</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Educação</td><td class='p-2 font-bold text-blue-600'>115</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Assistência social</td><td class='p-2 font-bold text-blue-600'>60</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Meio ambiente</td><td class='p-2 font-bold text-blue-600'>51</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Cultura</td><td class='p-2 font-bold text-blue-600'>25</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Segurança</td><td class='p-2 font-bold text-blue-600'>22</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Habitação</td><td class='p-2 font-bold text-blue-600'>19</td></tr><tr><td class='p-2 font-semibold text-slate-800'>Esporte</td><td class='p-2 font-bold text-blue-600'>14</td></tr>
-                </tbody>
-              </table>
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <h4 class="font-bold text-slate-800 text-sm mb-3">Prevalência da Saúde segundo a Esfera de Governo</h4>
+            <div class="space-y-3 text-xs">
+              <div class="p-3 bg-white rounded-lg border border-slate-200">
+                <div class="flex justify-between font-bold text-slate-800 mb-1">
+                  <span>Esfera Municipal</span>
+                  <span class="text-rose-600">67,4% Saúde</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2">
+                  <div class="bg-rose-500 h-2 rounded-full" style="width: 67.4%"></div>
+                </div>
+                <span class="text-slate-500 text-[11px] mt-1 block">A avaliação municipal no Brasil é amplamente financiada e ancorada no SUS.</span>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200">
+                <div class="flex justify-between font-bold text-slate-800 mb-1">
+                  <span>Esfera Estadual</span>
+                  <span class="text-amber-600">55,9% Saúde</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2">
+                  <div class="bg-amber-500 h-2 rounded-full" style="width: 55.9%"></div>
+                </div>
+                <span class="text-slate-500 text-[11px] mt-1 block">Secretarias estaduais de saúde lideram a contratação e uso de avaliações.</span>
+              </div>
+
+              <div class="p-3 bg-white rounded-lg border border-slate-200">
+                <div class="flex justify-between font-bold text-slate-800 mb-1">
+                  <span>Esfera Federal</span>
+                  <span class="text-blue-600">38,5% Saúde (Multissetorial)</span>
+                </div>
+                <div class="w-full bg-slate-100 rounded-full h-2">
+                  <div class="bg-blue-600 h-2 rounded-full" style="width: 38.5%"></div>
+                </div>
+                <span class="text-slate-500 text-[11px] mt-1 block">União possui estrutura dividida com Educação, Assistência Social e Planejamento.</span>
+              </div>
             </div>
           </div>
         </div>
@@ -470,7 +544,7 @@
                 <span class="text-xs bg-slate-200 text-slate-700 font-bold px-2 py-0.5 rounded">91 profissionais (37,1%)</span>
               </div>
               <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-                M&A é atividade <strong>secundária</strong> para 74%; equipes menores (4,4 pessoas); baixo uso de métodos complexos (20% estatística, 38% indicadores); baixa disseminação para decisores (49%).
+                M&A é atividade <strong>secundária</strong> para 74%; equipes menores (4,4 pessoas); baixo uso de métodos complexos (20% estatística, 38% indicadores); menor conexão com governantes (49%).
               </p>
             </div>
 
@@ -488,80 +562,187 @@
       </div>
     </section>
 
-    <!-- ABA 6: INSIGHTS ADICIONAIS -->
+    <!-- ABA 6: INSIGHTS APLICADOS E CRUZAMENTOS ESTRATÉGICOS -->
     <section id="tab-insights" class="tab-content hidden space-y-6">
       <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
         <div class="flex flex-col md:flex-row md:items-center justify-between border-b pb-4 mb-6 gap-2">
           <div>
-            <h2 class="text-xl font-bold text-slate-900">Insights Adicionais Relevantes (Para Validação)</h2>
-            <p class="text-sm text-slate-500">Achados suplementares de demografia, diversidade, formatos e disseminação</p>
+            <div class="flex items-center gap-2">
+              <h2 class="text-xl font-bold text-slate-900">Insights Adicionais Aplicados e Cruzamentos Estratégicos</h2>
+              <span class="bg-emerald-100 text-emerald-800 text-xs px-2.5 py-0.5 rounded-full font-bold">Validados & Integrados</span>
+            </div>
+            <p class="text-sm text-slate-500">Cruzamentos multivariados de demografia, equidade étnico-racial, modelo de participação e canais de disseminação</p>
           </div>
           <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-3 py-1 rounded-full font-semibold">
-            Subsídios para Gestão
+            Diretrizes para Políticas Públicas
           </span>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Card 1: Gênero -->
-          <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <span>👩‍💼</span> Predomínio Feminino no Campo
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Tanto no Evento 1 (<strong>60.2%</strong>) quanto no Survey (<strong>62.9%</strong>), as mulheres constituem a expressiva maioria dos profissionais de M&A e políticas informadas por evidências no Brasil.
-            </p>
-            <div class="text-xs font-semibold text-indigo-700 bg-indigo-50 p-2.5 rounded border border-indigo-200">
-              Taxa Feminina: ~60% a 63%
+        <!-- 4 Cards Superiores de Métricas Chave -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold uppercase text-indigo-600">Liderança Feminina</span>
+            <div class="text-2xl font-bold text-slate-900 mt-1">60,2% a 63,0%</div>
+            <span class="text-xs text-slate-500 block mt-0.5">75,0% das especialistas no Cluster de ATS</span>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold uppercase text-amber-700">Afunilamento Racial</span>
+            <div class="text-2xl font-bold text-slate-900 mt-1">71,3% Brancos</div>
+            <span class="text-xs text-slate-500 block mt-0.5">No núcleo duro de M&A vs 34,1% pardos na periferia</span>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold uppercase text-purple-700">Interiorização Digital</span>
+            <div class="text-2xl font-bold text-slate-900 mt-1">86,9% Online</div>
+            <span class="text-xs text-slate-500 block mt-0.5">Entre participantes residentes fora do DF</span>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
+            <span class="text-xs font-bold uppercase text-rose-600">Abismo da Comunicação</span>
+            <div class="text-2xl font-bold text-slate-900 mt-1">73,5% vs 33,1%</div>
+            <span class="text-xs text-slate-500 block mt-0.5">Decisores públicos vs. Sociedade civil</span>
+          </div>
+        </div>
+
+        <!-- 2 Gráficos de Cruzamentos Estratégicos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h4 class="text-sm font-bold text-slate-800 mb-1 flex items-center gap-2">
+              <span>🏛️</span> Cruzamento: Composição Étnico-Racial por Cluster de M&A
+            </h4>
+            <p class="text-xs text-slate-500 mb-4">Evidência de estratificação: concentração de pardos no grupo periférico e brancos no grupo central</p>
+            <div class="h-64">
+              <canvas id="chartRacaCluster"></canvas>
             </div>
           </div>
 
-          <!-- Card 2: Raça/Etnia -->
-          <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <span>🏛️</span> Sub-representação Racial
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              No Survey, <strong>66.5%</strong> autodeclaram-se brancos, <strong>24.9%</strong> pardos e apenas <strong>5.7%</strong> pretos. Em posições com doutorado e pós-doutorado, a proporção de brancos ultrapassa 73%.
-            </p>
-            <div class="text-xs font-semibold text-amber-800 bg-amber-50 p-2.5 rounded border border-amber-200">
-              Brancos: 66,5% | Pardos e Pretos: 30,6%
-            </div>
-          </div>
-
-          <!-- Card 3: Abismo de Comunicação -->
-          <div class="bg-slate-50 p-5 rounded-xl border border-slate-200 space-y-3">
-            <h3 class="font-bold text-slate-900 text-sm flex items-center gap-1.5">
-              <span>📢</span> O "Abismo da Comunicação Pública"
-            </h3>
-            <p class="text-xs text-slate-600 leading-relaxed">
-              Enquanto <strong>73.5%</strong> dos profissionais divulgam ativamente suas pesquisas para tomadores de decisão (sumários executivos e seminários), apenas <strong>33.1%</strong> comunicam para o público geral (redes, blogs, imprensa).
-            </p>
-            <div class="text-xs font-semibold text-rose-800 bg-rose-50 p-2.5 rounded border border-rose-200">
-              Gargalo na tradução de conhecimento p/ sociedade
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h4 class="text-sm font-bold text-slate-800 mb-1 flex items-center gap-2">
+              <span>📢</span> Canais de Disseminação e o "Abismo da Comunicação Pública"
+            </h4>
+            <p class="text-xs text-slate-500 mb-4">Percentual de profissionais que comunicam suas evidências por público-alvo</p>
+            <div class="h-64">
+              <canvas id="chartDisseminacao"></canvas>
             </div>
           </div>
         </div>
 
-        <div class="bg-blue-50/70 p-5 rounded-xl border border-blue-200 text-xs text-slate-700 leading-relaxed space-y-2 mt-4">
-          <h4 class="font-bold text-blue-900 uppercase tracking-wider text-xs">Outros Destaques Observados:</h4>
-          <ul class="list-disc list-inside space-y-1">
-            <li><strong>Preferência pela Modalidade Online:</strong> No Evento 1, mais de 53,6% dos inscritos optaram explicitamente pelo acompanhamento online, frente a apenas 24,1% presencial (relação de mais de 2 para 1), reforçando o alcance nacional e custo-efetividade do modelo híbrido.</li>
-            <li><strong>Estabilidade Institucional dos Especialistas:</strong> 73,5% dos respondentes ativos são servidores públicos estatutários ou empregados públicos estáveis, e 71,0% não mudaram de instituição nos últimos 5 anos.</li>
-            <li><strong>Capacitação Contínua:</strong> 63,7% realizaram capacitação recente em M&A nos últimos 3 anos, com predominância esmagadora do formato autoinstrucional / EAD assíncrono (>65%).</li>
-          </ul>
+        <!-- Mais 2 Gráficos: Modalidade Geográfica e Titulação Racial -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h4 class="text-sm font-bold text-slate-800 mb-1 flex items-center gap-2">
+              <span>🌐</span> Formato de Participação: DF vs. Demais Estados do Brasil
+            </h4>
+            <p class="text-xs text-slate-500 mb-4">O formato online foi determinante para a interiorização federativa da rede</p>
+            <div class="h-64">
+              <canvas id="chartModalidadeUF"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-white p-5 rounded-xl border border-slate-200 shadow-sm">
+            <h4 class="text-sm font-bold text-slate-800 mb-1 flex items-center gap-2">
+              <span>👩‍💼</span> Distribuição de Gênero nos Perfis de Trabalho
+            </h4>
+            <p class="text-xs text-slate-500 mb-4">Concentração feminina superior a 58% em todos os clusters, atingindo ápice na ATS</p>
+            <div class="h-64">
+              <canvas id="chartGeneroCluster"></canvas>
+            </div>
+          </div>
         </div>
+
+        <!-- Tabela Completa dos Cruzamentos Multivariados (Idêntica à Aba 8 da Planilha Excel) -->
+        <div class="bg-slate-50 p-5 rounded-xl border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-sm mb-3">Tabela de Cruzamentos Multivariados Validados (Aba 8 da Planilha Consolidada)</h4>
+          <div class="overflow-x-auto">
+            <table class="w-full text-xs text-left bg-white border border-slate-200 rounded-lg overflow-hidden">
+              <thead class="bg-slate-100 text-slate-700 uppercase font-semibold">
+                <tr>
+                  <th class="p-3">Dimensão Analítica</th>
+                  <th class="p-3">Segmento / Categoria</th>
+                  <th class="p-3 text-center">Percentual / Proporção</th>
+                  <th class="p-3">Implicação Estratégica</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100">
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Modalidade Fora do DF (Evento 1)</td>
+                  <td class="p-3 font-medium text-blue-700">Formato Online</td>
+                  <td class="p-3 text-center font-bold text-blue-700">86,9% (declarados)</td>
+                  <td class="p-3 text-slate-600">Custos de deslocamento a Brasília geram barreira de acesso à participação presencial.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Modalidade Fora do DF (Evento 1)</td>
+                  <td class="p-3 font-medium text-slate-700">Formato Presencial</td>
+                  <td class="p-3 text-center font-bold text-slate-700">10,3%</td>
+                  <td class="p-3 text-slate-600">Presença física restrita a gestores com diárias custeadas.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Modalidade Residentes no DF (Evento 1)</td>
+                  <td class="p-3 font-medium text-emerald-700">Formato Presencial</td>
+                  <td class="p-3 text-center font-bold text-emerald-700">41,0%</td>
+                  <td class="p-3 text-slate-600">Maior facilidade logística de deslocamento na capital federal.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Cluster 1 (Especialistas em ATS)</td>
+                  <td class="p-3 font-medium text-indigo-700">Gênero Feminino</td>
+                  <td class="p-3 text-center font-bold text-indigo-700">75,0%</td>
+                  <td class="p-3 text-slate-600">Liderança feminina expressiva na metodologia de fronteira em saúde e síntese.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Cluster 1 (Especialistas em ATS)</td>
+                  <td class="p-3 font-medium text-purple-700">Raça Pretos</td>
+                  <td class="p-3 text-center font-bold text-purple-700">9,4%</td>
+                  <td class="p-3 text-slate-600">Maior presença de pessoas autodeclaradas pretas entre os três grupos.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Cluster 2 (Avaliadores Ocasionais)</td>
+                  <td class="p-3 font-medium text-amber-700">Raça Pardos</td>
+                  <td class="p-3 text-center font-bold text-amber-700">34,1%</td>
+                  <td class="p-3 text-slate-600">Concentração de servidores pardos em funções acessórias e com menor poder decisório.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Cluster 3 (Núcleo M&A Ativo)</td>
+                  <td class="p-3 font-medium text-slate-800">Raça Brancos</td>
+                  <td class="p-3 text-center font-bold text-slate-800">71,3%</td>
+                  <td class="p-3 text-slate-600">Afunilamento de acesso ao núcleo de maior remuneração, equipes fixas e influência.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Comunicação Pública - Cluster 1</td>
+                  <td class="p-3 font-medium text-rose-700">Divulgação ao Público Geral</td>
+                  <td class="p-3 text-center font-bold text-rose-700">28,1%</td>
+                  <td class="p-3 text-slate-600">Comunicação técnica restrita a relatórios ministeriais da Conitec e órgãos de regulação.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Comunicação Pública - Cluster 2</td>
+                  <td class="p-3 font-medium text-rose-700">Divulgação ao Público Geral</td>
+                  <td class="p-3 text-center font-bold text-rose-700">19,8%</td>
+                  <td class="p-3 text-slate-600">Avaliadores pontuais carecem de instrumentos de difusão de seus achados.</td>
+                </tr>
+                <tr class="hover:bg-slate-50">
+                  <td class="p-3 font-semibold text-slate-900">Comunicação Pública - Cluster 3</td>
+                  <td class="p-3 font-medium text-emerald-700">Divulgação ao Público Geral</td>
+                  <td class="p-3 text-center font-bold text-emerald-700">44,3%</td>
+                  <td class="p-3 text-slate-600">Núcleo sênior possui maior maturidade comunicacional, mas ainda abaixo de 50%.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
       </div>
     </section>
 
   </main>
 
+  <!-- Rodapé -->
   <footer class="bg-slate-900 text-slate-400 py-6 text-xs text-center border-t border-slate-800 mt-12">
     <div class="max-w-7xl mx-auto px-4">
-      Painel Gerado para Análise de Dados de Monitoramento, Avaliação e Evidências • Ano 2024 • Antigravity AI
+      Painel Consolidado de Evidências em Políticas Públicas • Ano 2024 • Dados Atualizados e Alinhados à Planilha Excel e Relatório Oficial
     </div>
   </footer>
 
-  <!-- Scripts Interativos e Gráficos -->
+  <!-- Scripts Interativos Chart.js -->
   <script>
     // Gerenciador de Abas
     function switchTab(tabId) {
@@ -592,9 +773,7 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom' }
-        }
+        plugins: { legend: { position: 'bottom' } }
       }
     });
 
@@ -612,85 +791,71 @@
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: {
-          legend: { position: 'bottom' }
-        }
+        plugins: { legend: { position: 'bottom' } }
       }
     });
 
-    // Chart MCA Scatter
-    const mcaPoints = rawData.q3.points.map(p => ({
-      x: p.dim1,
-      y: p.dim2,
-      label: p.category,
-      variable: p.variable
-    }));
-
-    const colorMap = {
-      'faixa_tempo': '#2563eb',
-      'titulacao_clean': '#9333ea',
-      'funcao_clean': '#f59e0b'
-    };
+    // Chart ACM (Mapa Cartesiano)
+    const pts = rawData.q3.points;
+    const mcaDatasets = [
+      {
+        label: 'Tempo de Atuação',
+        data: pts.filter(p => p.variable === 'faixa_tempo').map(p => ({x: p.dim1, y: p.dim2, label: p.category})),
+        backgroundColor: '#2563eb',
+        pointRadius: 6
+      },
+      {
+        label: 'Titulação',
+        data: pts.filter(p => p.variable === 'titulacao_clean').map(p => ({x: p.dim1, y: p.dim2, label: p.category})),
+        backgroundColor: '#7c3aed',
+        pointRadius: 6
+      },
+      {
+        label: 'Função Profissional',
+        data: pts.filter(p => p.variable === 'funcao_clean').map(p => ({x: p.dim1, y: p.dim2, label: p.category})),
+        backgroundColor: '#059669',
+        pointRadius: 6
+      }
+    ];
 
     new Chart(document.getElementById('chartMCA'), {
       type: 'scatter',
-      data: {
-        datasets: [
-          {
-            label: 'Tempo de Atuação',
-            data: mcaPoints.filter(p => p.variable === 'faixa_tempo'),
-            backgroundColor: '#2563eb',
-            pointRadius: 7
-          },
-          {
-            label: 'Titulação Acadêmica',
-            data: mcaPoints.filter(p => p.variable === 'titulacao_clean'),
-            backgroundColor: '#9333ea',
-            pointRadius: 7
-          },
-          {
-            label: 'Função Profissional',
-            data: mcaPoints.filter(p => p.variable === 'funcao_clean'),
-            backgroundColor: '#f59e0b',
-            pointRadius: 7
-          }
-        ]
-      },
+      data: { datasets: mcaDatasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        scales: {
-          x: {
-            title: { display: true, text: 'Dimensão 1 (15,07% Inércia) - Acadêmico/Pesquisa (-) vs Prática/Gestão (+)' },
-            grid: { color: '#e2e8f0' }
-          },
-          y: {
-            title: { display: true, text: 'Dimensão 2 (11,52% Inércia) - Liderança/Gerência (+) vs Base Técnica (-)' },
-            grid: { color: '#e2e8f0' }
-          }
-        },
         plugins: {
           tooltip: {
             callbacks: {
               label: function(ctx) {
-                return ctx.raw.label + ' (' + ctx.parsed.x.toFixed(2) + ', ' + ctx.parsed.y.toFixed(2) + ')';
+                return ctx.dataset.label + ': ' + ctx.raw.label + ' (' + ctx.raw.x.toFixed(2) + ', ' + ctx.raw.y.toFixed(2) + ')';
               }
             }
+          },
+          legend: { position: 'bottom' }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Dimensão 1: Acadêmico-Sênior (-) vs Gestão-Operacional (+) [15,07%]' },
+            grid: { color: '#e2e8f0' }
+          },
+          y: {
+            title: { display: true, text: 'Dimensão 2: Liderança / Gerência Topo (+) [11,52%]' },
+            grid: { color: '#e2e8f0' }
           }
         }
       }
     });
 
-    // Chart Regioes
+    // Chart Regiões
     new Chart(document.getElementById('chartRegioes'), {
       type: 'bar',
       data: {
         labels: Object.keys(rawData.q4.regioes),
         datasets: [{
-          label: 'Inscrições',
           data: Object.values(rawData.q4.regioes),
           backgroundColor: '#3b82f6',
-          borderRadius: 6
+          borderRadius: 4
         }]
       },
       options: {
@@ -721,10 +886,10 @@
     new Chart(document.getElementById('chartSaude'), {
       type: 'doughnut',
       data: {
-        labels: ['Saúde (49,4%)', 'Outras Políticas Públicas (50,6%)'],
+        labels: ['Saúde (49,4%)', 'Outras Áreas (50,6%)'],
         datasets: [{
           data: [rawData.q4.saude['Sim'] || 557, rawData.q4.saude['Nao'] || 571],
-          backgroundColor: ['#0284c7', '#64748b']
+          backgroundColor: ['#0284c7', '#94a3b8']
         }]
       },
       options: {
@@ -734,7 +899,7 @@
       }
     });
 
-    // Chart Clusters
+    // Chart Clusters Q5
     const clusterLabels = ['Estatística', 'Qualitativo', 'Indicadores', 'Síntese', 'ATS', 'Participativo', 'Questionários', 'Decisores'];
     const c0 = rawData.q5.means['0'];
     const c1 = rawData.q5.means['1'];
@@ -746,17 +911,17 @@
         labels: clusterLabels,
         datasets: [
           {
-            label: 'Cluster 1: ATS e Síntese',
+            label: 'Cluster 1: ATS e Síntese (13,1%)',
             data: [c0.met_estatistica, c0.met_qualitativa, c0.met_indicadores, c0.met_sintese, c0.met_ats, c0.met_participativa, c0.met_questionarios, c0.diss_decisores],
             backgroundColor: '#3b82f6'
           },
           {
-            label: 'Cluster 2: Ocasionais',
+            label: 'Cluster 2: Ocasionais / Periférico (37,1%)',
             data: [c1.met_estatistica, c1.met_qualitativa, c1.met_indicadores, c1.met_sintese, c1.met_ats, c1.met_participativa, c1.met_questionarios, c1.diss_decisores],
             backgroundColor: '#94a3b8'
           },
           {
-            label: 'Cluster 3: Núcleo Multimetodológico',
+            label: 'Cluster 3: Núcleo Ativo (49,8%)',
             data: [c2.met_estatistica, c2.met_qualitativa, c2.met_indicadores, c2.met_sintese, c2.met_ats, c2.met_participativa, c2.met_questionarios, c2.diss_decisores],
             backgroundColor: '#10b981'
           }
@@ -772,6 +937,131 @@
             ticks: {
               callback: function(val) { return (val * 100) + '%'; }
             }
+          }
+        }
+      }
+    });
+
+    // Chart Raça por Cluster (Novo Gráfico de Insight Aplicado)
+    new Chart(document.getElementById('chartRacaCluster'), {
+      type: 'bar',
+      data: {
+        labels: ['Cluster 1 (ATS)', 'Cluster 2 (Ocasionais)', 'Cluster 3 (Núcleo Ativo)'],
+        datasets: [
+          {
+            label: 'Brancos (%)',
+            data: [65.6, 59.3, 71.3],
+            backgroundColor: '#3b82f6'
+          },
+          {
+            label: 'Pardos (%)',
+            data: [21.9, 34.1, 23.8],
+            backgroundColor: '#f59e0b'
+          },
+          {
+            label: 'Pretos (%)',
+            data: [9.4, 4.4, 4.9],
+            backgroundColor: '#6366f1'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { callback: function(v) { return v + '%'; } }
+          }
+        }
+      }
+    });
+
+    // Chart Disseminação (Novo Gráfico de Insight Aplicado)
+    new Chart(document.getElementById('chartDisseminacao'), {
+      type: 'bar',
+      data: {
+        labels: ['Decisores Governamentais', 'Congressos Acadêmicos', 'Artigos em Revistas', 'Sociedade Civil / Público Geral'],
+        datasets: [{
+          label: '% de Profissionais que Utilizam',
+          data: [73.5, 43.3, 38.8, 33.1],
+          backgroundColor: ['#2563eb', '#6366f1', '#8b5cf6', '#f43f5e'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: {
+          x: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { callback: function(v) { return v + '%'; } }
+          }
+        }
+      }
+    });
+
+    // Chart Modalidade UF (Novo Gráfico de Insight Aplicado)
+    new Chart(document.getElementById('chartModalidadeUF'), {
+      type: 'bar',
+      data: {
+        labels: ['Residentes no Distrito Federal', 'Residentes nos Demais Estados (Fora DF)'],
+        datasets: [
+          {
+            label: 'Modalidade Online',
+            data: [51.2, 86.9],
+            backgroundColor: '#0284c7'
+          },
+          {
+            label: 'Modalidade Presencial',
+            data: [48.8, 13.1],
+            backgroundColor: '#10b981'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { callback: function(v) { return v + '%'; } }
+          }
+        }
+      }
+    });
+
+    // Chart Gênero por Cluster (Novo Gráfico de Insight Aplicado)
+    new Chart(document.getElementById('chartGeneroCluster'), {
+      type: 'bar',
+      data: {
+        labels: ['Cluster 1 (ATS e Síntese)', 'Cluster 2 (Ocasionais)', 'Cluster 3 (Núcleo Ativo)'],
+        datasets: [
+          {
+            label: 'Mulheres (%)',
+            data: [75.0, 58.2, 63.1],
+            backgroundColor: '#ec4899'
+          },
+          {
+            label: 'Homens (%)',
+            data: [25.0, 39.6, 34.4],
+            backgroundColor: '#64748b'
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          y: {
+            beginAtZero: true,
+            max: 100,
+            ticks: { callback: function(v) { return v + '%'; } }
           }
         }
       }
