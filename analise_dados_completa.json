@@ -1,0 +1,314 @@
+{
+  "q1": {
+    "total_survey": 521,
+    "anon": 295,
+    "identified": 226,
+    "e1_match": 47,
+    "e2_match": 17,
+    "both_match": 4,
+    "any_match": 60,
+    "external": 166,
+    "pct_external_id": 73.45,
+    "pct_any_id": 26.55,
+    "pct_any_total": 11.52
+  },
+  "q2": {
+    "e1_total": 742,
+    "e2_total": 386,
+    "unique_total": 1086,
+    "overlap": 42,
+    "e2_new": 344,
+    "renewal_rate": 89.12,
+    "recurrence_rate_e2": 10.88,
+    "recurrence_rate_e1": 5.66,
+    "recurrence_rate_total": 3.87
+  },
+  "q3": {
+    "n": 243,
+    "inertia_dim1": 15.07,
+    "inertia_dim2": 11.52,
+    "inertia_cum": 26.59,
+    "chi2_tit_func": {
+      "chi2": 70.06,
+      "p": 3.1218e-10,
+      "dof": 12
+    },
+    "chi2_tmp_tit": {
+      "chi2": 46.02,
+      "p": 0.0001,
+      "dof": 16
+    },
+    "chi2_tmp_func": {
+      "chi2": 17.86,
+      "p": 0.1201,
+      "dof": 12
+    },
+    "points": [
+      {
+        "variable": "faixa_tempo",
+        "category": "1. Até 2 anos",
+        "dim1": 1.1213,
+        "dim2": -0.5354
+      },
+      {
+        "variable": "faixa_tempo",
+        "category": "2. De 3 a 5 anos",
+        "dim1": 0.3779,
+        "dim2": -0.2265
+      },
+      {
+        "variable": "faixa_tempo",
+        "category": "3. De 6 a 10 anos",
+        "dim1": 0.1026,
+        "dim2": 0.4613
+      },
+      {
+        "variable": "faixa_tempo",
+        "category": "4. De 11 a 20 anos",
+        "dim1": -0.7256,
+        "dim2": 0.2241
+      },
+      {
+        "variable": "faixa_tempo",
+        "category": "5. Mais de 20 anos",
+        "dim1": -0.8482,
+        "dim2": -1.1549
+      },
+      {
+        "variable": "titulacao_clean",
+        "category": "Doutorado",
+        "dim1": -0.4911,
+        "dim2": 0.4073
+      },
+      {
+        "variable": "titulacao_clean",
+        "category": "Especialização",
+        "dim1": 1.1132,
+        "dim2": -1.3283
+      },
+      {
+        "variable": "titulacao_clean",
+        "category": "Graduação/Médio",
+        "dim1": 0.7737,
+        "dim2": -1.2437
+      },
+      {
+        "variable": "titulacao_clean",
+        "category": "Mestrado",
+        "dim1": 0.6926,
+        "dim2": 0.5149
+      },
+      {
+        "variable": "titulacao_clean",
+        "category": "Pós-doutorado",
+        "dim1": -1.2565,
+        "dim2": -0.6
+      },
+      {
+        "variable": "funcao_clean",
+        "category": "Como gerente.",
+        "dim1": 0.4802,
+        "dim2": 2.7542
+      },
+      {
+        "variable": "funcao_clean",
+        "category": "Como pesquisador(a).",
+        "dim1": -0.6356,
+        "dim2": -0.1593
+      },
+      {
+        "variable": "funcao_clean",
+        "category": "Como prático(a).",
+        "dim1": 0.6062,
+        "dim2": 0.2806
+      },
+      {
+        "variable": "funcao_clean",
+        "category": "Na gestão.",
+        "dim1": 1.0408,
+        "dim2": -0.5037
+      }
+    ]
+  },
+  "q4": {
+    "total_events": 1128,
+    "uf_top": {
+      "DF": 512,
+      "SP": 124,
+      "RJ": 90,
+      "BA": 43,
+      "MG": 40,
+      "PR": 30,
+      "GO": 30,
+      "CE": 25,
+      "RS": 25,
+      "PA": 21,
+      "NA": 20,
+      "SC": 18
+    },
+    "regioes": {
+      "Centro-Oeste": 559,
+      "Sudeste": 269,
+      "Nordeste": 138,
+      "Sul": 73,
+      "Norte": 65,
+      "Outro/Exterior": 24
+    },
+    "esferas": {
+      "Público Federal": 487,
+      "Público Estadual": 220,
+      "Outros": 207,
+      "Público Municipal": 95,
+      "Privado": 70,
+      "Autônomo": 45,
+      "Não informado": 4
+    },
+    "saude": {
+      "Nao": 588,
+      "Sim": 536,
+      "Não informado": 4
+    },
+    "esfera_x_saude": {
+      "Autônomo": {
+        "Nao": 19,
+        "Não informado": 0,
+        "Sim": 26
+      },
+      "Não informado": {
+        "Nao": 0,
+        "Não informado": 4,
+        "Sim": 0
+      },
+      "Outros": {
+        "Nao": 134,
+        "Não informado": 0,
+        "Sim": 73
+      },
+      "Privado": {
+        "Nao": 30,
+        "Não informado": 0,
+        "Sim": 40
+      },
+      "Público Estadual": {
+        "Nao": 97,
+        "Não informado": 0,
+        "Sim": 123
+      },
+      "Público Federal": {
+        "Nao": 277,
+        "Não informado": 0,
+        "Sim": 210
+      },
+      "Público Municipal": {
+        "Nao": 31,
+        "Não informado": 0,
+        "Sim": 64
+      }
+    },
+    "survey_setor": {
+      "Serviço público federal": 132,
+      "Serviço público estadual": 42,
+      "Terceiro setor": 20,
+      "Setor privado": 18,
+      "Sou autônomo(a)": 17,
+      "Serviço público municipal": 16
+    },
+    "survey_tematicas": {
+      "Saúde": 134,
+      "Educação": 115,
+      "Assistência social": 60,
+      "Meio ambiente": 51,
+      "Cultura": 25,
+      "Segurança": 22,
+      "Habitação": 19,
+      "Esporte": 14
+    }
+  },
+  "q5": {
+    "counts": {
+      "2": 122,
+      "1": 91,
+      "0": 32
+    },
+    "means": {
+      "0": {
+        "ativid_principal": 0.5625,
+        "proj_ativo": 0.875,
+        "proj_internac": 0.3125,
+        "tam_equipe": 8.6875,
+        "met_estatistica": 0.625,
+        "met_qualitativa": 0.5625,
+        "met_indicadores": 0.71875,
+        "met_sintese": 0.6875,
+        "met_ats": 1.0,
+        "met_participativa": 0.4375,
+        "met_questionarios": 0.625,
+        "diss_decisores": 0.78125,
+        "diss_geral": 0.28125,
+        "fez_capacitacao": 0.75
+      },
+      "1": {
+        "ativid_principal": 0.26373626373626374,
+        "proj_ativo": 0.5054945054945055,
+        "proj_internac": 0.07692307692307693,
+        "tam_equipe": 4.373626373626373,
+        "met_estatistica": 0.1978021978021978,
+        "met_qualitativa": 0.38461538461538464,
+        "met_indicadores": 0.38461538461538464,
+        "met_sintese": 0.14285714285714285,
+        "met_ats": 0.02197802197802198,
+        "met_participativa": 0.16483516483516483,
+        "met_questionarios": 0.2087912087912088,
+        "diss_decisores": 0.4945054945054945,
+        "diss_geral": 0.1978021978021978,
+        "fez_capacitacao": 0.5604395604395604
+      },
+      "2": {
+        "ativid_principal": 0.7540983606557377,
+        "proj_ativo": 0.9426229508196722,
+        "proj_internac": 0.3442622950819672,
+        "tam_equipe": 5.655737704918033,
+        "met_estatistica": 0.639344262295082,
+        "met_qualitativa": 0.6557377049180327,
+        "met_indicadores": 0.7868852459016393,
+        "met_sintese": 0.38524590163934425,
+        "met_ats": 0.0,
+        "met_participativa": 0.5409836065573771,
+        "met_questionarios": 0.7213114754098361,
+        "diss_decisores": 0.9016393442622951,
+        "diss_geral": 0.4426229508196721,
+        "fez_capacitacao": 0.6639344262295082
+      }
+    },
+    "names": {
+      "0": "Cluster 1: Especialistas em ATS e Síntese de Evidências em Grandes Equipes",
+      "1": "Cluster 2: Avaliadores Ocasionais / Prática Periférica",
+      "2": "Cluster 3: Núcleo Multimetodológico de Alta Intensidade Operacional"
+    }
+  },
+  "insights": {
+    "sexo_e1": {
+      "Feminino": 60.2,
+      "Masculino": 39.8
+    },
+    "genero_survey": {
+      "Mulher cis": 62.9,
+      "Homem cis": 35.1,
+      "Outros/Não declarado": 2.0
+    },
+    "raca_survey": {
+      "Branca": 66.5,
+      "Parda": 24.9,
+      "Preta": 5.7,
+      "Prefiro não informar": 1.6,
+      "Amarela": 1.2
+    },
+    "diss_decisores_pct": 73.5,
+    "diss_geral_pct": 33.1,
+    "modalidade_e1": {
+      "Online": 57.3,
+      "Presencial": 25.8,
+      "Outro": 16.9
+    }
+  }
+}
